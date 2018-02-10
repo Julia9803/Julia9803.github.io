@@ -159,11 +159,107 @@
 <h2 id="6-对象"><a href="#6-对象" class="headerlink" title="6. 对象"></a>6. 对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var person=&#123;firstname:&quot;John&quot;, lastname:&quot;Doe&quot;, id:5566&#125;;</span><br></pre></td></tr></table></figure>
 <p>寻址方式：<br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=person.lastname;</span><br><span class="line">name=person[“lastname&quot;];</span><br></pre></td></tr></table></figure>
-<h2 id="7-声明变量类型"><a href="#7-声明变量类型" class="headerlink" title="7. 声明变量类型"></a>7. 声明变量类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var carname = new String;</span><br><span class="line"> var x = new Number;</span><br><span class="line"> var y = new Boolean;</span><br><span class="line"> var cars = new Array;</span><br><span class="line"> var person = new Object;</span><br></pre></td></tr></table></figure>
-<h2 id="8-常见的HTML事件"><a href="#8-常见的HTML事件" class="headerlink" title="8. 常见的HTML事件"></a>8. 常见的HTML事件</h2><p>下面是一些常见的HTML事件的列表:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">事件|描述</span><br><span class="line">---|---</span><br><span class="line">onchange|HTML 元素改变</span><br><span class="line">onclick|用户点击 HTML 元素</span><br><span class="line">onmouseover|用户在一个HTML元素上移动鼠标</span><br><span class="line">onmouseout|用户从一个HTML元素上移开鼠标</span><br><span class="line">onkeydown|用户按下键盘按键</span><br><span class="line">onload|浏览器已完成页面的加载</span><br></pre></td></tr></table></figure></p>
+<h2 id="7-声明变量类型"><a href="#7-声明变量类型" class="headerlink" title="7. 声明变量类型"></a>7. 声明变量类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var carname = new String;</span><br><span class="line">var x = new Number;</span><br><span class="line">var y = new Boolean;</span><br><span class="line">var cars = new Array;</span><br><span class="line">var person = new Object;</span><br></pre></td></tr></table></figure>
+<h2 id="8-常见的HTML事件"><a href="#8-常见的HTML事件" class="headerlink" title="8. 常见的HTML事件"></a>8. 常见的HTML事件</h2><p>下面是一些常见的HTML事件的列表:</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onchange</td>
+<td>HTML 元素改变</td>
+</tr>
+<tr>
+<td>onclick</td>
+<td>用户点击 HTML 元素</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>用户在一个HTML元素上移动鼠标</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>用户从一个HTML元素上移开鼠标</td>
+</tr>
+<tr>
+<td>onkeydown</td>
+<td>用户按下键盘按键</td>
+</tr>
+<tr>
+<td>onload</td>
+<td>浏览器已完成页面的加载</td>
+</tr>
+</tbody>
+</table>
 <h2 id="9-常见转义符"><a href="#9-常见转义符" class="headerlink" title="9. 常见转义符"></a>9. 常见转义符</h2><p>下表中列举了在字符串中可以使用转义字符转义的特殊字符：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">代码|输出</span><br><span class="line">---|---</span><br><span class="line">\&apos;	|单引号</span><br><span class="line">\&quot;	|双引号</span><br><span class="line">\\	|反斜杠</span><br><span class="line">\n	|换行</span><br><span class="line">\r	|回车</span><br><span class="line">\t	|tab(制表符)</span><br><span class="line">\b	|退格符</span><br><span class="line">\f	|换页符</span><br></pre></td></tr></table></figure>
-<h2 id="10-字符串属性"><a href="#10-字符串属性" class="headerlink" title="10. 字符串属性"></a>10. 字符串属性</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">属性|描述</span><br><span class="line">---|---</span><br><span class="line">constructor|返回创建字符串属性的函数</span><br><span class="line">length|返回字符串的长度</span><br><span class="line">prototype|允许您向对象添加属性和方法</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>代码</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\’</td>
+<td>单引号</td>
+</tr>
+<tr>
+<td>\”</td>
+<td>双引号</td>
+</tr>
+<tr>
+<td>\</td>
+<td>反斜杠</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>换行</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>回车</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>tab(制表符)</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>退格符</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>换页符</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-字符串属性"><a href="#10-字符串属性" class="headerlink" title="10. 字符串属性"></a>10. 字符串属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>返回创建字符串属性的函数</td>
+</tr>
+<tr>
+<td>length</td>
+<td>返回字符串的长度</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>允许您向对象添加属性和方法</td>
+</tr>
+</tbody>
+</table>
 </section>
     <!-- Tags START -->
     
