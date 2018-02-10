@@ -147,9 +147,8 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>##1. button事件响应</p>
-<h3 id="1）一般"><a href="#1）一般" class="headerlink" title="1）一般"></a>1）一般</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot; onclick=“alert(&apos;欢迎!&apos;)&quot;&gt;点我!&lt;/button&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="2）通过id"><a href="#2）通过id" class="headerlink" title="2）通过id"></a>2）通过id</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;我的第一段 JavaScript&lt;/h1&gt;</span><br><span class="line">&lt;p id=&quot;demo&quot;&gt;</span><br><span class="line">JavaScript 能改变 HTML 元素的内容。</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function myFunction()&#123;</span><br><span class="line">	x=document.getElementById(&quot;demo&quot;);  // 找到元素</span><br><span class="line">	x.innerHTML=&quot;Hello JavaScript!&quot;;    // 改变内容</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;点击这里&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+    <section class="markdown-content"><h2 id="1-button事件响应"><a href="#1-button事件响应" class="headerlink" title="1. button事件响应"></a>1. button事件响应</h2><h3 id="1）一般"><a href="#1）一般" class="headerlink" title="1）一般"></a>1）一般</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot; onclick=“alert(&apos;欢迎!&apos;)&quot;&gt;点我!&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="2）通过id"><a href="#2）通过id" class="headerlink" title="2）通过id"></a>2）通过id</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;h1&gt;我的第一段 JavaScript&lt;/h1&gt;</span><br><span class="line">&lt;p id=&quot;demo&quot;&gt;</span><br><span class="line">JavaScript 能改变 HTML 元素的内容。</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">function myFunction()&#123;</span><br><span class="line">    x=document.getElementById(&quot;demo&quot;);  // 找到元素</span><br><span class="line">    x.innerHTML=&quot;Hello JavaScript!&quot;;    // 改变内容</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;点击这里&lt;/button&gt;</span><br></pre></td></tr></table></figure>
 <h2 id="2-警示框"><a href="#2-警示框" class="headerlink" title="2. 警示框"></a>2. 警示框</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.alert(5 + 6);</span><br></pre></td></tr></table></figure>
 <h2 id="3-修改HTML元素"><a href="#3-修改HTML元素" class="headerlink" title="3. 修改HTML元素"></a>3. 修改HTML元素</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(“demo&quot;).innerHTML=&quot;段落已修改。&quot;;</span><br></pre></td></tr></table></figure>
 <h2 id="4-写操作"><a href="#4-写操作" class="headerlink" title="4. 写操作"></a>4. 写操作</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 console.log() 方法在浏览器中（调试模式）显示 JavaScript 值</span><br></pre></td></tr></table></figure>
@@ -159,7 +158,7 @@
 <h2 id="6-对象"><a href="#6-对象" class="headerlink" title="6. 对象"></a>6. 对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var person=&#123;firstname:&quot;John&quot;, lastname:&quot;Doe&quot;, id:5566&#125;;</span><br></pre></td></tr></table></figure>
 <p>寻址方式：<br></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name=person.lastname;</span><br><span class="line">name=person[“lastname&quot;];</span><br></pre></td></tr></table></figure>
-<h2 id="7-声明变量类型"><a href="#7-声明变量类型" class="headerlink" title="7. 声明变量类型"></a>7. 声明变量类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var carname = new String;</span><br><span class="line">var x = new Number;</span><br><span class="line">var y = new Boolean;</span><br><span class="line">var cars = new Array;</span><br><span class="line">var person = new Object;</span><br></pre></td></tr></table></figure>
+<h2 id="7-声明变量类型"><a href="#7-声明变量类型" class="headerlink" title="7. 声明变量类型"></a>7. 声明变量类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var carname = new String;</span><br><span class="line">var x = new Number;</span><br><span class="line">var y = new Boolean;</span><br><span class="line">var cars = new Array;</span><br><span class="line">var person = new Object;</span><br></pre></td></tr></table></figure>
 <h2 id="8-常见的HTML事件"><a href="#8-常见的HTML事件" class="headerlink" title="8. 常见的HTML事件"></a>8. 常见的HTML事件</h2><p>下面是一些常见的HTML事件的列表:</p>
 <table>
 <thead>
@@ -278,17 +277,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2018/02/09/hello-world/">
+      <a class="nav-left" href="/2018/02/10/JS-学习笔记(0)/">
         <span class="nav-arrow">← </span>
         
-          Hello World
+          JS 学习笔记(0)
         
       </a>
     
     
-      <a class="nav-right" href="/2018/02/10/JS-学习笔记-0/">
+      <a class="nav-right" href="/2018/02/10/JS-学习笔记-1/">
         
-          JS 学习笔记(0)
+          JS 学习笔记(1)
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -337,7 +336,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1）一般"><span class="toc-nav-text">1）一般</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2）通过id"><span class="toc-nav-text">2）通过id</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-警示框"><span class="toc-nav-text">2. 警示框</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-修改HTML元素"><span class="toc-nav-text">3. 修改HTML元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-写操作"><span class="toc-nav-text">4. 写操作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-数组"><span class="toc-nav-text">5. 数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#例1："><span class="toc-nav-text">例1：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#例2："><span class="toc-nav-text">例2：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#例3："><span class="toc-nav-text">例3：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6-对象"><span class="toc-nav-text">6. 对象</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#7-声明变量类型"><span class="toc-nav-text">7. 声明变量类型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#8-常见的HTML事件"><span class="toc-nav-text">8. 常见的HTML事件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#9-常见转义符"><span class="toc-nav-text">9. 常见转义符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#10-字符串属性"><span class="toc-nav-text">10. 字符串属性</span></a>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#1-button事件响应"><span class="toc-nav-text">1. button事件响应</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1）一般"><span class="toc-nav-text">1）一般</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2）通过id"><span class="toc-nav-text">2）通过id</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#2-警示框"><span class="toc-nav-text">2. 警示框</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#3-修改HTML元素"><span class="toc-nav-text">3. 修改HTML元素</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#4-写操作"><span class="toc-nav-text">4. 写操作</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#5-数组"><span class="toc-nav-text">5. 数组</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#例1："><span class="toc-nav-text">例1：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#例2："><span class="toc-nav-text">例2：</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#例3："><span class="toc-nav-text">例3：</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#6-对象"><span class="toc-nav-text">6. 对象</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#7-声明变量类型"><span class="toc-nav-text">7. 声明变量类型</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#8-常见的HTML事件"><span class="toc-nav-text">8. 常见的HTML事件</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#9-常见转义符"><span class="toc-nav-text">9. 常见转义符</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#10-字符串属性"><span class="toc-nav-text">10. 字符串属性</span></a></li></ol>
     
   </div>
 </aside>
@@ -347,7 +346,7 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2018/02/10/JS-学习笔记(0)/';
+    var url = 'http://yoursite.com/2018/02/10/JS-学习笔记-0/';
     var banner = 'http://i4.bvimg.com/632086/43e37c3326aab191.jpg'
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
