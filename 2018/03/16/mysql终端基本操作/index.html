@@ -10,7 +10,7 @@
   
   <title>
     
-      用Scrapy和xpath爬取网页-2 | Julia&#39;s BLOG
+      Julia&#39;s BLOG
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -138,8 +138,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>用Scrapy和xpath爬取网页-2</h2>
-  <p class="post-date">2018-02-14</p>
+  <h2></h2>
+  <p class="post-date">2018-03-16</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -147,32 +147,23 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><p>本文是接上节中内容，在pycharm里面爬取数据。</p>
-<h2 id="一、pycharm配置scrapy"><a href="#一、pycharm配置scrapy" class="headerlink" title="一、pycharm配置scrapy"></a>一、pycharm配置scrapy</h2><p>pycharm可以自己下载scrapy非常方便。</p>
-<p>Preferences -&gt; Project Interpreter 直接添加Scrapy即可。</p>
-<h2 id="二、建立scrapy项目"><a href="#二、建立scrapy项目" class="headerlink" title="二、建立scrapy项目"></a>二、建立scrapy项目</h2><p>上节中已经介绍过，在pycharm里打开刚建立好的scrapy项目</p>
-<h2 id="三、编写爬虫代码"><a href="#三、编写爬虫代码" class="headerlink" title="三、编写爬虫代码"></a>三、编写爬虫代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scrapy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">GanjiSpider</span><span class="params">(scrapy.Spider)</span>:</span></span><br><span class="line">    name = <span class="string">"zufang"</span></span><br><span class="line">    start_urls = [<span class="string">'http://bj.ganji.com/fang1/'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">parse</span><span class="params">(self, response)</span>:</span></span><br><span class="line">        print(response)</span><br><span class="line"></span><br><span class="line">        title_list = response.xpath(<span class="string">".//div[@class='f-list-item ershoufang-list']/dl/dd[1]/a/text()"</span>).extract()</span><br><span class="line">        price_list = response.xpath(<span class="string">".//div[@class='f-list-item ershoufang-list']/dl/dd[5]/div[1]/span[1]/text()"</span>).extract()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i, j <span class="keyword">in</span> zip(title_list, price_list):</span><br><span class="line">            print(i).encode(<span class="string">'UTF-8'</span>)</span><br><span class="line">            print(j)</span><br></pre></td></tr></table></figure>
-<p>批注：</p>
-<ol>
-<li>不要忘了加encode 不然打印出来的不是汉字。</li>
-<li>python内置zip函数。 是取其后两个参数一组一组打印，以少的为准。</li>
-</ol>
-<h2 id="四、在pycharm内置终端上爬取项目"><a href="#四、在pycharm内置终端上爬取项目" class="headerlink" title="四、在pycharm内置终端上爬取项目"></a>四、在pycharm内置终端上爬取项目</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy crawl project</span><br></pre></td></tr></table></figure>
-<p>批注：此处project为项目名</p>
-<p>另外，还可以用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy list</span><br></pre></td></tr></table></figure>
-<p>查看当前所有scrapy项目</p>
+    <section class="markdown-content"><h1 id="mac-终端里进入mysql和退出"><a href="#mac-终端里进入mysql和退出" class="headerlink" title="mac 终端里进入mysql和退出"></a><a href="http://www.cnblogs.com/uoar/p/6492521.html" target="_blank" rel="noopener">mac 终端里进入mysql和退出</a></h1><p>先在偏好设置里启动mysql服务</p>
+<p>获取超级权限</p>
+<p>在终端输入代码</p>
+<p>sudo su</p>
+<p>输入完后获取超级权限 终端显示 sh-3.2#</p>
+<p>输入本机密码（Apple ID密码）</p>
+<p>接着通过绝对路径登陆 代码</p>
+<p>/usr/local/mysql/bin/mysql -u root -p</p>
+<p>再输入mysql密码（我的密码设置为root）</p>
+<p>登陆成功</p>
+<p>退出代码</p>
+<p>quit</p>
+<p>退出成功 bye</p>
+<p>最后退出sh-3.2#超级权限 代码</p>
+<p>exi</p>
 </section>
     <!-- Tags START -->
-    
-      <div class="tags">
-        <span>Tags:</span>
-        
-  <a href="/tags#爬虫" >
-    <span class="tag-code">爬虫</span>
-  </a>
-
-      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
@@ -180,17 +171,17 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2018/02/13/用Scrapy和xpath爬取网页-1/">
+      <a class="nav-left" href="/2018/02/14/用Scrapy和xpath爬取网页-2/">
         <span class="nav-arrow">← </span>
         
-          用Scrapy和xpath爬取网页-1
+          用Scrapy和xpath爬取网页-2
         
       </a>
     
     
-      <a class="nav-right" href="/2018/03/16/mysql终端基本操作/">
+      <a class="nav-right" href="/2018/03/16/mysql终端基本操作-1/">
         
-          (untitled)
+          mysql终端基本操作
         
         <span class="nav-arrow"> →</span>
       </a>
@@ -239,7 +230,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#一、pycharm配置scrapy"><span class="toc-nav-text">一、pycharm配置scrapy</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#二、建立scrapy项目"><span class="toc-nav-text">二、建立scrapy项目</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#三、编写爬虫代码"><span class="toc-nav-text">三、编写爬虫代码</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#四、在pycharm内置终端上爬取项目"><span class="toc-nav-text">四、在pycharm内置终端上爬取项目</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#mac-终端里进入mysql和退出"><span class="toc-nav-text">mac 终端里进入mysql和退出</span></a></li></ol>
     
   </div>
 </aside>
@@ -249,8 +240,8 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2018/02/14/用Scrapy和xpath爬取网页-2/';
-    var banner = 'https://s1.ax1x.com/2018/02/21/9NvRkd.jpg'
+    var url = 'http://yoursite.com/2018/03/16/mysql终端基本操作/';
+    var banner = ''
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
@@ -305,7 +296,7 @@
     var gitmentConfig = "Julia9803";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "用Scrapy和xpath爬取网页-2",
+        id: "",
         owner: "Julia9803",
         repo: "julia9803.github.io",
         oauth: {
