@@ -10,7 +10,7 @@
   
   <title>
     
-      Julia&#39;s BLOG
+      mysql终端基本操作 | Julia&#39;s BLOG
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -138,7 +138,7 @@
 </header>
 
     <div id="article-banner">
-  <h2></h2>
+  <h2>mysql终端基本操作</h2>
   <p class="post-date">2018-03-16</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
@@ -147,7 +147,7 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h1 id="mac-终端里进入mysql和退出"><a href="#mac-终端里进入mysql和退出" class="headerlink" title="mac 终端里进入mysql和退出"></a><a href="http://www.cnblogs.com/uoar/p/6492521.html" target="_blank" rel="noopener">mac 终端里进入mysql和退出</a></h1><p>先在偏好设置里启动mysql服务</p>
+    <section class="markdown-content"><h3 id="1-从终端进出mysql"><a href="#1-从终端进出mysql" class="headerlink" title="1. 从终端进出mysql"></a>1. 从终端进出mysql</h3><p>先在偏好设置里启动mysql服务</p>
 <p>获取超级权限</p>
 <p>在终端输入代码</p>
 <p>sudo su</p>
@@ -161,9 +161,26 @@
 <p>quit</p>
 <p>退出成功 bye</p>
 <p>最后退出sh-3.2#超级权限 代码</p>
-<p>exi</p>
+<p>exit</p>
+<h3 id="2-修改mysql密码"><a href="#2-修改mysql密码" class="headerlink" title="2. 修改mysql密码"></a>2. 修改mysql密码</h3><p>set password for ‘root’@’localhost’ = password(‘root’);</p>
+<h3 id="3-数据库操作"><a href="#3-数据库操作" class="headerlink" title="3. 数据库操作"></a>3. 数据库操作</h3><p>下面介绍一些关于从数据库创建到使用的一些简单的方法；</p>
+<p><strong>创建一个名字为mydatabase数据库：  create database mydatabase ;</strong></p>
+<p><strong>可以用以下地命令来查看创建的数据库是否成功： show databases ;</strong></p>
+<p><strong>更改数据库名字 ： alter databases  Hdatabase ;</strong></p>
+<p><strong>更改数据库mydatabase的字符集 ：  alter database mydatabase charset GBK ;</strong></p>
+<p>进入数据库：  use mydatabase ;</p>
+<p><strong>用下面的命令来查看该数据库中的表：  show tables ;</strong></p>
 </section>
     <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#mysql" >
+    <span class="tag-code">mysql</span>
+  </a>
+
+      </div>
     
     <!-- Tags END -->
     <!-- NAV START -->
@@ -178,13 +195,6 @@
         
       </a>
     
-    
-      <a class="nav-right" href="/2018/03/16/mysql终端基本操作-1/">
-        
-          mysql终端基本操作
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -230,7 +240,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#mac-终端里进入mysql和退出"><span class="toc-nav-text">mac 终端里进入mysql和退出</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-从终端进出mysql"><span class="toc-nav-text">1. 从终端进出mysql</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-修改mysql密码"><span class="toc-nav-text">2. 修改mysql密码</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-数据库操作"><span class="toc-nav-text">3. 数据库操作</span></a></li></ol>
     
   </div>
 </aside>
@@ -241,7 +251,7 @@
 <script>
   (function () {
     var url = 'http://yoursite.com/2018/03/16/mysql终端基本操作/';
-    var banner = ''
+    var banner = 'https://s1.ax1x.com/2018/02/21/9NvRkd.jpg'
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
@@ -296,7 +306,7 @@
     var gitmentConfig = "Julia9803";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "",
+        id: "mysql终端基本操作",
         owner: "Julia9803",
         repo: "julia9803.github.io",
         oauth: {
