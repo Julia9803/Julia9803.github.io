@@ -154,16 +154,18 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">"myList"</span>).appendChild(newListItem);</span><br></pre></td></tr></table></figure>
 <p>直接操作HTML DOM的方法是不行的，组件不会被渲染到。</p>
 <p>之前上网查了很多方法都不是太优雅，比如</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newDIV = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line"><span class="keyword">var</span> desktop = <span class="built_in">document</span>.getElementById(<span class="string">'body'</span>);</span><br><span class="line">desktop.appendChild(newDIV);</span><br><span class="line">ReactDOM.render(new_compoent, newDIV);<span class="number">1234</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> newDIV = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line"><span class="keyword">var</span> desktop = <span class="built_in">document</span>.getElementById(<span class="string">'body'</span>);</span><br><span class="line">desktop.appendChild(newDIV);</span><br><span class="line">ReactDOM.render(new_compoent, newDIV);</span><br></pre></td></tr></table></figure>
 <h3 id="2-解决方案"><a href="#2-解决方案" class="headerlink" title="2. 解决方案"></a>2. 解决方案</h3><p><em>react里面有个公式：组件(数据)=渲染出的DOM。</em></p>
 <p>在React中所有数据是要放到props或者state中，调用setState后组件才会刷新，即重新执行render方法。</p>
 <p>于是首先将自定义组件CardView写好然后export</p>
-<p><img src="/Users/julia98/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/925583000/QQ/Temp.db/FEEA0E83-9C87-48C1-B8C5-C30738D16B35.png" alt="FEEA0E83-9C87-48C1-B8C5-C30738D16B35"></p>
+<p><img src="https://imgchr.com/i/Pxc2QS" alt=""></p>
 <p>然后写一个自定义数量生成CardView组件的组件CommonCardView</p>
-<p><img src="/Users/julia98/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/925583000/QQ/Temp.db/4376F3F2-A469-4CE8-92A0-0FAD014690D3.png" alt="4376F3F2-A469-4CE8-92A0-0FAD014690D3"></p>
+<p><img src="https://imgchr.com/i/Pxc2QS
+https://imgchr.com/i/Pxccz8
+https://imgchr.com/i/Pxc6Rf" alt=""></p>
 <p>最后在页面中加入CommonCardView组件即可。</p>
 <p><em>其中，数据经过props传递。</em></p>
-<p><img src="/var/folders/13/7xljd7d16p5_t9_7ty3hprz00000gn/T/abnerworks.Typora/image-20180902151649784.png" alt="image-20180902151649784"></p>
+<p><img src="https://imgchr.com/i/Pxc6Rf" alt=""></p>
 <p>以上。</p>
 </section>
     <!-- Tags START -->
