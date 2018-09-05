@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/09/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1/</loc>
+    
+    <lastmod>2018-09-05T03:12:16.814Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/09/02/React%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90component%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6/</loc>
     
     <lastmod>2018-09-02T05:32:21.104Z</lastmod>
@@ -534,14 +541,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>http://yoursite.com/project/index.html</loc>
     
     <lastmod>2018-02-09T04:23:40.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/project/index.html</loc>
+    <loc>http://yoursite.com/about/index.html</loc>
     
     <lastmod>2018-02-09T04:23:40.000Z</lastmod>
     
