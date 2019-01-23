@@ -10,7 +10,7 @@
   
   <title>
     
-      常用命令 | Julia&#39;s BLOG
+      python常用语句 | Julia&#39;s BLOG
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -138,8 +138,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>常用命令</h2>
-  <p class="post-date">2019-01-21</p>
+  <h2>python常用语句</h2>
+  <p class="post-date">2019-01-23</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -147,21 +147,18 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h4 id="SSH远程连接服务器"><a href="#SSH远程连接服务器" class="headerlink" title="SSH远程连接服务器"></a>SSH远程连接服务器</h4><p>ssh -p 端口号 username@服务器IP</p>
-<h4 id="SSH本地开启远程jupyter-notebook"><a href="#SSH本地开启远程jupyter-notebook" class="headerlink" title="SSH本地开启远程jupyter notebook"></a>SSH本地开启远程jupyter notebook</h4><p>ssh -p 端口号 username@服务器IP -N -L localhost:8889:localhost:8888</p>
-<p>注：服务器jupyter notebook的端口号8888映射到本地端口号8889</p>
-<p>第一次使用时，需要将服务器jupyter notebook链接的token输入到本地窗口中</p>
-<h4 id="SCP上传与下载文件夹"><a href="#SCP上传与下载文件夹" class="headerlink" title="SCP上传与下载文件夹"></a>SCP上传与下载文件夹</h4><h5 id="1-本地上传到远端服务器"><a href="#1-本地上传到远端服务器" class="headerlink" title="1. 本地上传到远端服务器"></a>1. 本地上传到远端服务器</h5><p>scp -r 本地文件夹绝对路径 username@服务器IP:服务器绝对路径</p>
-<h5 id="2-远端服务器下载到本地"><a href="#2-远端服务器下载到本地" class="headerlink" title="2. 远端服务器下载到本地"></a>2. 远端服务器下载到本地</h5><p>scp -r username@服务器IP:服务器绝对路径 本地绝对路径</p>
-<p>注：服务器端口不是默认端口22的，要在scp后加 -P 端口号 （P大写）</p>
+    <section class="markdown-content"><h4 id="1-Pandas-int-to-string"><a href="#1-Pandas-int-to-string" class="headerlink" title="1. Pandas int to string"></a>1. Pandas int to string</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">'A'</span>].apply(str)</span><br><span class="line">df.applymap(str)</span><br></pre></td></tr></table></figure>
+<h4 id="2-Pandas-去掉数据中空白"><a href="#2-Pandas-去掉数据中空白" class="headerlink" title="2. Pandas 去掉数据中空白"></a>2. Pandas 去掉数据中空白</h4><p>Series.str.strip(to_strip=None)去除两边空白<br>Series.str.lstrip(to_strip=None)去除左边空白<br>Series.str.rstrip(to_strip=None)去除右边空白</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'   spacious   '</span>.strip()</span><br><span class="line"><span class="string">'spacious'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'www.example.com'</span>.strip(<span class="string">'cmowz.'</span>)</span><br><span class="line"><span class="string">'example'</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-Pandas-split"><a href="#3-Pandas-split" class="headerlink" title="3. Pandas split"></a>3. Pandas split</h4><p><img src="https://upload-images.jianshu.io/upload_images/8612260-bfb50753244ea5a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/727" alt=""></p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#常用命令行" >
-    <span class="tag-code">常用命令行</span>
+  <a href="/tags#python" >
+    <span class="tag-code">python</span>
   </a>
 
       </div>
@@ -172,20 +169,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2018/09/05/机器学习笔记-1/">
+      <a class="nav-left" href="/2019/01/21/常用命令/">
         <span class="nav-arrow">← </span>
         
-          机器学习笔记(1)-Rule Learning
+          常用命令
         
       </a>
     
-    
-      <a class="nav-right" href="/2019/01/23/python常用语句/">
-        
-          python常用语句
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -231,7 +221,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#SSH远程连接服务器"><span class="toc-nav-text">SSH远程连接服务器</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#SSH本地开启远程jupyter-notebook"><span class="toc-nav-text">SSH本地开启远程jupyter notebook</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#SCP上传与下载文件夹"><span class="toc-nav-text">SCP上传与下载文件夹</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-本地上传到远端服务器"><span class="toc-nav-text">1. 本地上传到远端服务器</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-远端服务器下载到本地"><span class="toc-nav-text">2. 远端服务器下载到本地</span></a></li></ol></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-Pandas-int-to-string"><span class="toc-nav-text">1. Pandas int to string</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-Pandas-去掉数据中空白"><span class="toc-nav-text">2. Pandas 去掉数据中空白</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-Pandas-split"><span class="toc-nav-text">3. Pandas split</span></a></li></ol>
     
   </div>
 </aside>
@@ -241,8 +231,8 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2019/01/21/常用命令/';
-    var banner = 'http://chuantu.biz/t6/226/1518340278x-1566638243.jpg'
+    var url = 'http://yoursite.com/2019/01/23/python常用语句/';
+    var banner = 'https://s1.ax1x.com/2018/02/21/9NvRkd.jpg'
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
@@ -297,7 +287,7 @@
     var gitmentConfig = "Julia9803";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "常用命令",
+        id: "python常用语句",
         owner: "Julia9803",
         repo: "julia9803.github.io",
         oauth: {
