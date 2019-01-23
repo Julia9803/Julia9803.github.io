@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-23T11:23:23.093Z</updated>
+  <updated>2019-01-23T11:35:13.137Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/01/23/python%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5/"/>
     <id>http://yoursite.com/2019/01/23/python常用语句/</id>
     <published>2019-01-23T10:49:15.000Z</published>
-    <updated>2019-01-23T11:23:23.093Z</updated>
+    <updated>2019-01-23T11:35:13.137Z</updated>
     
     <content type="html"><![CDATA[<h4 id="1-Pandas-int-to-string"><a href="#1-Pandas-int-to-string" class="headerlink" title="1. Pandas int to string"></a>1. Pandas int to string</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">'A'</span>].apply(str)</span><br><span class="line">df.applymap(str)</span><br></pre></td></tr></table></figure><h4 id="2-Pandas-去掉数据中空白"><a href="#2-Pandas-去掉数据中空白" class="headerlink" title="2. Pandas 去掉数据中空白"></a>2. Pandas 去掉数据中空白</h4><p>Series.str.strip(to_strip=None)去除两边空白<br>Series.str.lstrip(to_strip=None)去除左边空白<br>Series.str.rstrip(to_strip=None)去除右边空白</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'   spacious   '</span>.strip()</span><br><span class="line"><span class="string">'spacious'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'www.example.com'</span>.strip(<span class="string">'cmowz.'</span>)</span><br><span class="line"><span class="string">'example'</span></span><br></pre></td></tr></table></figure><h4 id="3-Pandas-split"><a href="#3-Pandas-split" class="headerlink" title="3. Pandas split"></a>3. Pandas split</h4><p><img src="https://upload-images.jianshu.io/upload_images/8612260-bfb50753244ea5a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/727" alt=""></p>]]></content>
     
@@ -44,7 +44,7 @@
     <link href="http://yoursite.com/2019/01/21/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2019/01/21/常用命令/</id>
     <published>2019-01-21T13:55:01.000Z</published>
-    <updated>2019-01-23T11:23:10.871Z</updated>
+    <updated>2019-01-23T11:35:34.497Z</updated>
     
     <content type="html"><![CDATA[<h4 id="SSH远程连接服务器"><a href="#SSH远程连接服务器" class="headerlink" title="SSH远程连接服务器"></a>SSH远程连接服务器</h4><p>ssh -p 端口号 username@服务器IP</p><h4 id="SSH本地开启远程jupyter-notebook"><a href="#SSH本地开启远程jupyter-notebook" class="headerlink" title="SSH本地开启远程jupyter notebook"></a>SSH本地开启远程jupyter notebook</h4><p>ssh -p 端口号 username@服务器IP -N -L localhost:8889:localhost:8888</p><p>注：服务器jupyter notebook的端口号8888映射到本地端口号8889</p><p>第一次使用时，需要将服务器jupyter notebook链接的token输入到本地窗口中</p><h4 id="SCP上传与下载文件夹"><a href="#SCP上传与下载文件夹" class="headerlink" title="SCP上传与下载文件夹"></a>SCP上传与下载文件夹</h4><h5 id="1-本地上传到远端服务器"><a href="#1-本地上传到远端服务器" class="headerlink" title="1. 本地上传到远端服务器"></a>1. 本地上传到远端服务器</h5><p>scp -r 本地文件夹绝对路径 username@服务器IP:服务器绝对路径</p><h5 id="2-远端服务器下载到本地"><a href="#2-远端服务器下载到本地" class="headerlink" title="2. 远端服务器下载到本地"></a>2. 远端服务器下载到本地</h5><p>scp -r username@服务器IP:服务器绝对路径 本地绝对路径</p><p>注：服务器端口不是默认端口22的，要在scp后加 -P 端口号 （P大写）</p><h4 id="screen-SSH远程会话管理工具"><a href="#screen-SSH远程会话管理工具" class="headerlink" title="screen SSH远程会话管理工具"></a>screen SSH远程会话管理工具</h4><h5 id="1-创建screen会话"><a href="#1-创建screen会话" class="headerlink" title="1. 创建screen会话"></a>1. 创建screen会话</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">screen -S name</span><br></pre></td></tr></table></figure><h5 id="2-暂时离开，保留screen会话中任务"><a href="#2-暂时离开，保留screen会话中任务" class="headerlink" title="2. 暂时离开，保留screen会话中任务"></a>2. 暂时离开，保留screen会话中任务</h5><p>Ctrl+a d（按住Ctrl, 依次再按a, d）</p><h5 id="3-恢复screen会话"><a href="#3-恢复screen会话" class="headerlink" title="3. 恢复screen会话"></a>3. 恢复screen会话</h5><p>screen -r name</p><p>或者通过 screen -ls 获取screen会话的进程id</p><p><img src="https://www.vpser.net/uploads/2010/10/screen-ls.jpg" alt=""></p><p>然后 screen -r 11791</p><h5 id="4-关闭screen会话"><a href="#4-关闭screen会话" class="headerlink" title="4. 关闭screen会话"></a>4. 关闭screen会话</h5><p>exit</p><h5 id="5-远程演示"><a href="#5-远程演示" class="headerlink" title="5. 远程演示"></a>5. 远程演示</h5><p>演示者先在服务器上执行 screen -S test 创建一个screen会话，观众可以链接到远程服务器上执行screen -x test 观众屏幕上就会出现与演示者同步</p><h5 id="6-常用快捷键"><a href="#6-常用快捷键" class="headerlink" title="6. 常用快捷键"></a>6. 常用快捷键</h5><p>Ctrl+a c ：在当前screen会话中创建窗口<br>Ctrl+a w ：窗口列表<br>Ctrl+a n ：下一个窗口<br>Ctrl+a p ：上一个窗口<br>Ctrl+a 0-9 ：在第0个窗口和第9个窗口之间切换</p>]]></content>
     
