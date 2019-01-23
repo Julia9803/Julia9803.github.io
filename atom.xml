@@ -44,7 +44,7 @@
     <link href="http://yoursite.com/2019/01/21/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2019/01/21/常用命令/</id>
     <published>2019-01-21T13:55:01.000Z</published>
-    <updated>2019-01-23T11:04:25.990Z</updated>
+    <updated>2019-01-23T11:10:44.056Z</updated>
     
     <content type="html"><![CDATA[<h4 id="SSH远程连接服务器"><a href="#SSH远程连接服务器" class="headerlink" title="SSH远程连接服务器"></a>SSH远程连接服务器</h4><p>ssh -p 端口号 username@服务器IP</p><h4 id="SSH本地开启远程jupyter-notebook"><a href="#SSH本地开启远程jupyter-notebook" class="headerlink" title="SSH本地开启远程jupyter notebook"></a>SSH本地开启远程jupyter notebook</h4><p>ssh -p 端口号 username@服务器IP -N -L localhost:8889:localhost:8888</p><p>注：服务器jupyter notebook的端口号8888映射到本地端口号8889</p><p>第一次使用时，需要将服务器jupyter notebook链接的token输入到本地窗口中</p><h4 id="SCP上传与下载文件夹"><a href="#SCP上传与下载文件夹" class="headerlink" title="SCP上传与下载文件夹"></a>SCP上传与下载文件夹</h4><h5 id="1-本地上传到远端服务器"><a href="#1-本地上传到远端服务器" class="headerlink" title="1. 本地上传到远端服务器"></a>1. 本地上传到远端服务器</h5><p>scp -r 本地文件夹绝对路径 username@服务器IP:服务器绝对路径</p><h5 id="2-远端服务器下载到本地"><a href="#2-远端服务器下载到本地" class="headerlink" title="2. 远端服务器下载到本地"></a>2. 远端服务器下载到本地</h5><p>scp -r username@服务器IP:服务器绝对路径 本地绝对路径</p><p>注：服务器端口不是默认端口22的，要在scp后加 -P 端口号 （P大写）</p>]]></content>
     
