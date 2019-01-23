@@ -120,7 +120,7 @@
     <link href="http://yoursite.com/2018/03/16/mysql%E7%BB%88%E7%AB%AF%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"/>
     <id>http://yoursite.com/2018/03/16/mysql终端基本操作/</id>
     <published>2018-03-16T07:29:23.000Z</published>
-    <updated>2019-01-23T11:31:40.767Z</updated>
+    <updated>2019-01-23T11:32:37.692Z</updated>
     
     <content type="html"><![CDATA[<h3 id="1-从终端进出mysql"><a href="#1-从终端进出mysql" class="headerlink" title="1. 从终端进出mysql"></a>1. 从终端进出mysql</h3><p>先在偏好设置里启动mysql服务</p><p>获取超级权限</p><p>在终端输入代码</p><p>sudo su</p><p>输入完后获取超级权限 终端显示 sh-3.2#</p><p>输入本机密码（Apple ID密码）</p><p>接着通过绝对路径登陆 代码</p><p>/usr/local/mysql/bin/mysql -u root -p</p><p>再输入mysql密码（我的密码设置为root）</p><p>登陆成功</p><p>退出代码</p><p>quit</p><p>退出成功 bye</p><p>最后退出sh-3.2#超级权限 代码</p><p>exit</p><h3 id="2-修改mysql密码"><a href="#2-修改mysql密码" class="headerlink" title="2. 修改mysql密码"></a>2. 修改mysql密码</h3><p>set password for ‘root‘@’localhost’ = password(‘root’);</p><h3 id="3-数据库操作"><a href="#3-数据库操作" class="headerlink" title="3. 数据库操作"></a>3. 数据库操作</h3><p>下面介绍一些关于从数据库创建到使用的一些简单的方法；</p><p><strong>创建一个名字为mydatabase数据库：  create database mydatabase ;</strong></p><p><strong>可以用以下地命令来查看创建的数据库是否成功： show databases ;</strong></p><p><strong>更改数据库名字 ： alter databases  Hdatabase ;</strong></p><p><strong>更改数据库mydatabase的字符集 ：  alter database mydatabase charset GBK ;</strong></p><p>进入数据库：  use mydatabase ;</p><p><strong>用下面的命令来查看该数据库中的表：  show tables ;</strong></p>]]></content>
     
