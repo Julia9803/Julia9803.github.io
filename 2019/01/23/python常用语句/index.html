@@ -151,6 +151,10 @@
 <h4 id="2-Pandas-去掉数据中空白"><a href="#2-Pandas-去掉数据中空白" class="headerlink" title="2. Pandas 去掉数据中空白"></a>2. Pandas 去掉数据中空白</h4><p>Series.str.strip(to_strip=None)去除两边空白<br>Series.str.lstrip(to_strip=None)去除左边空白<br>Series.str.rstrip(to_strip=None)去除右边空白</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'   spacious   '</span>.strip()</span><br><span class="line"><span class="string">'spacious'</span></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'www.example.com'</span>.strip(<span class="string">'cmowz.'</span>)</span><br><span class="line"><span class="string">'example'</span></span><br></pre></td></tr></table></figure>
 <h4 id="3-Pandas-split"><a href="#3-Pandas-split" class="headerlink" title="3. Pandas split"></a>3. Pandas split</h4><p><img src="https://upload-images.jianshu.io/upload_images/8612260-bfb50753244ea5a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/727" alt=""></p>
+<h4 id="4-dropna"><a href="#4-dropna" class="headerlink" title="4. dropna"></a>4. dropna</h4><p>删除行 axis=0 </p>
+<p>删除列 axis=1</p>
+<p>一般删除行，若删除列则会删除一个变量</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df.dropna(axis = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">df.ix[<span class="number">1</span>, :<span class="number">-1</span>] = np.nan        <span class="comment"># 将指定数据定义为缺失</span></span><br></pre></td></tr></table></figure>
 </section>
     <!-- Tags START -->
     
@@ -221,7 +225,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-Pandas-int-to-string"><span class="toc-nav-text">1. Pandas int to string</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-Pandas-去掉数据中空白"><span class="toc-nav-text">2. Pandas 去掉数据中空白</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-Pandas-split"><span class="toc-nav-text">3. Pandas split</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-Pandas-int-to-string"><span class="toc-nav-text">1. Pandas int to string</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-Pandas-去掉数据中空白"><span class="toc-nav-text">2. Pandas 去掉数据中空白</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-Pandas-split"><span class="toc-nav-text">3. Pandas split</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-dropna"><span class="toc-nav-text">4. dropna</span></a></li></ol>
     
   </div>
 </aside>
