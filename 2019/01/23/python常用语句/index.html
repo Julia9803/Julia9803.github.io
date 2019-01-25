@@ -155,6 +155,15 @@
 <p>删除列 axis=1</p>
 <p>一般删除行，若删除列则会删除一个变量</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df.dropna(axis = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">df.ix[<span class="number">1</span>, :<span class="number">-1</span>] = np.nan        <span class="comment"># 将指定数据定义为缺失</span></span><br></pre></td></tr></table></figure>
+<h4 id="5-随机取样"><a href="#5-随机取样" class="headerlink" title="5. 随机取样"></a>5. 随机取样</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line">df.sample(n=<span class="number">20000</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="1-Pandas-sample"><a href="#1-Pandas-sample" class="headerlink" title="1. Pandas sample"></a>1. Pandas sample</h5><p>DataFrame.sample(n=None, frac=None, replace=False, weights=None, random_state=None, axis=None)</p>
+<p><strong>n是要抽取的行数。</strong>（例如n=20000时，抽取其中的2W行）</p>
+<p><strong>frac是抽取的比列。</strong>（有一些时候，我们并对具体抽取的行数不关系，我们想抽取其中的百分比，这个时候就可以选择使用frac，例如frac=0.8，就是抽取其中80%）</p>
+<p><strong>replace：是否为有放回抽样</strong>，取replace=True时为有放回抽样。</p>
+<p><strong>weights是每个样本的权重</strong>，具体可以看官方文档说明。</p>
+<p><strong>random_state,</strong>（参考官方文档）int or numpy.random.RandomState, optional<br>Seed for the random number generator (if int), or numpy RandomState object.</p>
+<p><strong>axis是选择抽取数据的行还是列。</strong>axis=0的时是抽取行，axis=1时是抽取列（也就是说axis=1时，在列中随机抽取n列，在axis=0时，在行中随机抽取n行）</p>
+<h5 id="2-Numpy-sample"><a href="#2-Numpy-sample" class="headerlink" title="2. Numpy sample"></a>2. Numpy sample</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">np.random.sample(Your_index)</span><br></pre></td></tr></table></figure>
 </section>
     <!-- Tags START -->
     
@@ -225,7 +234,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-Pandas-int-to-string"><span class="toc-nav-text">1. Pandas int to string</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-Pandas-去掉数据中空白"><span class="toc-nav-text">2. Pandas 去掉数据中空白</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-Pandas-split"><span class="toc-nav-text">3. Pandas split</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-dropna"><span class="toc-nav-text">4. dropna</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#1-Pandas-int-to-string"><span class="toc-nav-text">1. Pandas int to string</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#2-Pandas-去掉数据中空白"><span class="toc-nav-text">2. Pandas 去掉数据中空白</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#3-Pandas-split"><span class="toc-nav-text">3. Pandas split</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#4-dropna"><span class="toc-nav-text">4. dropna</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#5-随机取样"><span class="toc-nav-text">5. 随机取样</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#1-Pandas-sample"><span class="toc-nav-text">1. Pandas sample</span></a></li><li class="toc-nav-item toc-nav-level-5"><a class="toc-nav-link" href="#2-Numpy-sample"><span class="toc-nav-text">2. Numpy sample</span></a></li></ol></li></ol>
     
   </div>
 </aside>
