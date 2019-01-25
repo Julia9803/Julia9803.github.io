@@ -153,6 +153,7 @@
 <li><strong>param_grid</strong>：值为字典或者列表，即需要最优化的参数的取值。比如：cv_params = {‘n_estimators’: [550, 575, 600, 650, 675]}</li>
 <li><strong>scoring</strong> :准确度评价标准，默认None,这时需要使用score函数；或者如scoring=’roc_auc’，根据所选模型不同，评价准则不同。字符串（函数名），或是可调用对象，需要其函数签名形如：scorer(estimator, X, y)；如果是None，则使用estimator的误差估计函数。scoring参数选择如下</li>
 </ol>
+<p><img src="/css/img/1.png" alt=""></p>
 <p><a href="https://scikit-learn.org/stable/modules/model_evaluation.html" target="_blank" rel="noopener">https://scikit-learn.org/stable/modules/model_evaluation.html</a></p>
 <p>调参开始一般要初始化一些值：</p>
 <blockquote>
