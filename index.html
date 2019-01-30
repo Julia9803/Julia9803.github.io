@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Julia&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Julia&#39;s BLOG
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+<link rel="stylesheet" href="/assets/waifu.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+<div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+<script src="/assets/waifu-tips.js"></script>
+<script src="/assets/live2d.js"></script>
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+    initModel("/assets/waifu-tips.json");
+</script>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Julia's BLOG</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/25/机器学习之XGBoost调参/">机器学习之-XGBoost调参</a>
+      </h2>
+      <p class="article-date">January 25, 2019</p>
+      
+        
+  <a href="/tags#machine learning" >
+    <span class="tag-code">machine learning</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          XGBoost 作为构建分类模型比较出色的算法，是在GBDT之后又做提升的，我这里通过自己正在做的项目进行一个基于XGBoost的调参实践。以下为具体步骤：
+1. 常用参数解读
+estimator：所使用的分类器，如果比赛中使用的是XGBoost的话，就是生成的model。比如： model ...
+        
+      </div>
+      <a class="more" href="/2019/01/25/机器学习之XGBoost调参/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/23/python常用语句/">python常用语句</a>
+      </h2>
+      <p class="article-date">January 23, 2019</p>
+      
+        
+  <a href="/tags#python" >
+    <span class="tag-code">python</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          1. Pandas int to string12df['A'].apply(str)df.applymap(str)
+2. Pandas 去掉数据中空白Series.str.strip(to_strip=None)去除两边空白Series.str.lstrip(to_strip=None) ...
+        
+      </div>
+      <a class="more" href="/2019/01/23/python常用语句/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2019/01/21/常用命令/">常用命令</a>
+      </h2>
+      <p class="article-date">January 21, 2019</p>
+      
+        
+  <a href="/tags#常用命令行" >
+    <span class="tag-code">常用命令行</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          SSH远程连接服务器ssh -p 端口号 username@服务器IP
+SSH本地开启远程jupyter notebookssh -p 端口号 username@服务器IP -N -L localhost:8889:localhost:8888
+注：服务器jupyter notebook的端 ...
+        
+      </div>
+      <a class="more" href="/2019/01/21/常用命令/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/09/05/机器学习之Rule Learning/">机器学习之-Rule Learning</a>
+      </h2>
+      <p class="article-date">September 5, 2018</p>
+      
+        
+  <a href="/tags#machine learning" >
+    <span class="tag-code">machine learning</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          本文所做数据处理为计算entropy(熵)，应用简易的Rule Learning(规则学习)算法。
+所用数据为：
+sailing-custom-python.tab
+zoo-python.tab
+1. Import 各种包123import pandas as pdimport numpy  ...
+        
+      </div>
+      <a class="more" href="/2018/09/05/机器学习之Rule Learning/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/09/02/React动态生成component自定义组件/">React动态生成component自定义组件</a>
+      </h2>
+      <p class="article-date">September 2, 2018</p>
+      
+        
+  <a href="/tags#React" >
+    <span class="tag-code">React</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          1. 遇到的问题这段时间写React项目，要根据自定义数量生成自定义组件。
+原始的
+1document.getElementById(expamle).innerHTML +="";
+或者
+1document.getElementById("myList").appendChild(newL ...
+        
+      </div>
+      <a class="more" href="/2018/09/02/React动态生成component自定义组件/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/03/16/mysql终端基本操作/">mysql终端基本操作</a>
+      </h2>
+      <p class="article-date">March 16, 2018</p>
+      
+        
+  <a href="/tags#常用命令行" >
+    <span class="tag-code">常用命令行</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          1. 从终端进出mysql先在偏好设置里启动mysql服务
+获取超级权限
+在终端输入代码
+sudo su
+输入完后获取超级权限 终端显示 sh-3.2#
+输入本机密码（Apple ID密码）
+接着通过绝对路径登陆 代码
+/usr/local/mysql/bin/mysql -u root - ...
+        
+      </div>
+      <a class="more" href="/2018/03/16/mysql终端基本操作/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/02/14/用Scrapy和xpath爬取网页-2/">用Scrapy和xpath爬取网页-2</a>
+      </h2>
+      <p class="article-date">February 14, 2018</p>
+      
+        
+  <a href="/tags#python" >
+    <span class="tag-code">python</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          本文是接上节中内容，在pycharm里面爬取数据。
+一、pycharm配置scrapypycharm可以自己下载scrapy非常方便。
+Preferences -&gt; Project Interpreter 直接添加Scrapy即可。
+二、建立scrapy项目上节中已经介绍过，在pych ...
+        
+      </div>
+      <a class="more" href="/2018/02/14/用Scrapy和xpath爬取网页-2/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/02/13/用Scrapy和xpath爬取网页-1/">用Scrapy和xpath爬取网页-1</a>
+      </h2>
+      <p class="article-date">February 13, 2018</p>
+      
+        
+  <a href="/tags#python" >
+    <span class="tag-code">python</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          一、Scrapy首先，Scrapy是一个爬虫框架，用来爬取网页。接下来的工作基于Scrapy的基本应用。
+1）关于Scrapy的部署首先我电脑里已经有python2 和python3。
+python3会带有pip。
+我是用pip来安装scrapy的。
+首先检测一下pip3版本。
+12pip3 ...
+        
+      </div>
+      <a class="more" href="/2018/02/13/用Scrapy和xpath爬取网页-1/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/02/10/JS-学习笔记-1/">JS 学习笔记-1</a>
+      </h2>
+      <p class="article-date">February 10, 2018</p>
+      
+        
+  <a href="/tags#JavaScript" >
+    <span class="tag-code">JavaScript</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          11. 字符串方法
+
+
+Method
+描述
+
+
+
+
+charAt()
+返回指定索引位置的字符
+
+
+charCodeAt()
+返回指定索引位置字符的 Unicode 值
+
+
+concat()
+连接两个或多个字符串，返回连接后的字符串
+
+
+fromCharCode()
+将字符转换为 Unicod ...
+        
+      </div>
+      <a class="more" href="/2018/02/10/JS-学习笔记-1/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/02/10/JS-学习笔记-0/">JS 学习笔记-0</a>
+      </h2>
+      <p class="article-date">February 10, 2018</p>
+      
+        
+  <a href="/tags#JavaScript" >
+    <span class="tag-code">JavaScript</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          1. button事件响应1）一般1&lt;button type=&quot;button&quot; onclick=“alert(&apos;欢迎!&apos;)&quot;&gt;点我!&lt;/button&gt;
+2）通过id1234567891011&lt;h1&gt;我的第一 ...
+        
+      </div>
+      <a class="more" href="/2018/02/10/JS-学习笔记-0/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a class="unvisible" href="/"><span class="page-arrow">←</span> Prev</a>
+  
+  
+    <a href="/page/2/">Next<span class="page-arrow"> →</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Julia&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      用Scrapy和xpath爬取网页-1 | Julia&#39;s BLOG
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+<link rel="stylesheet" href="/assets/waifu.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+<div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+<script src="/assets/waifu-tips.js"></script>
+<script src="/assets/live2d.js"></script>
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+    initModel("/assets/waifu-tips.json");
+</script>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Julia's BLOG</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2>用Scrapy和xpath爬取网页-1</h2>
+  <p class="post-date">2018-02-13</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h2 id="一、Scrapy"><a href="#一、Scrapy" class="headerlink" title="一、Scrapy"></a>一、Scrapy</h2><p>首先，Scrapy是一个爬虫框架，用来爬取网页。接下来的工作基于Scrapy的基本应用。</p>
+<h3 id="1）关于Scrapy的部署"><a href="#1）关于Scrapy的部署" class="headerlink" title="1）关于Scrapy的部署"></a>1）关于Scrapy的部署</h3><p>首先我电脑里已经有python2 和python3。</p>
+<p>python3会带有pip。</p>
+<p>我是用pip来安装scrapy的。</p>
+<p>首先检测一下pip3版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip3 --version</span><br><span class="line">pip 9.0.1 from /Library/Frameworks/Python.framework/Versions/3.5/lib/python3.5/site-packages (python 3.5)</span><br></pre></td></tr></table></figure>
+<p>然后用pip3安装Scrapy。【高亮】此处S大写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install Scrapy</span><br></pre></td></tr></table></figure>
+<p>接下来测试一下Scrapy的版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Scrapy 1.5.0 - no active project</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line">  scrapy &lt;command&gt; [options] [args]</span><br><span class="line"></span><br><span class="line">Available commands:</span><br><span class="line">  bench         Run quick benchmark test</span><br><span class="line">  fetch         Fetch a URL using the Scrapy downloader</span><br><span class="line">  genspider     Generate new spider using pre-defined templates</span><br><span class="line">  runspider     Run a self-contained spider (without creating a project)</span><br><span class="line">  settings      Get settings values</span><br><span class="line">  shell         Interactive scraping console</span><br><span class="line">  startproject  Create new project</span><br><span class="line">  version       Print Scrapy version</span><br><span class="line">  view          Open URL in browser, as seen by Scrapy</span><br><span class="line"></span><br><span class="line">  [ more ]      More commands available when run from project directory</span><br><span class="line"></span><br><span class="line">Use &quot;scrapy &lt;command&gt; -h&quot; to see more info about a command</span><br></pre></td></tr></table></figure>
+<p>ok 此时Scrapy已经部署完毕</p>
+<h3 id="2）用Scrapy创建项目（此例中不必须）"><a href="#2）用Scrapy创建项目（此例中不必须）" class="headerlink" title="2）用Scrapy创建项目（此例中不必须）"></a>2）用Scrapy创建项目（此例中不必须）</h3><p>在命令行中新建项目（此处spider为项目名）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy startproject spider</span><br></pre></td></tr></table></figure>
+<h2 id="二、爬取网页数据"><a href="#二、爬取网页数据" class="headerlink" title="二、爬取网页数据"></a>二、爬取网页数据</h2><h3 id="1-我们随便测试一个网站"><a href="#1-我们随便测试一个网站" class="headerlink" title="1)我们随便测试一个网站"></a>1)我们随便测试一个网站</h3><p>随便登录一个网站并且拷贝地址。在终端（即命令行）中运行。（如下地址可替换为任一网站）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scrapy shell http://bj.ganji.com/fang1/</span><br></pre></td></tr></table></figure>
+<h3 id="2）在默认浏览器中打开刚刚爬取的网页"><a href="#2）在默认浏览器中打开刚刚爬取的网页" class="headerlink" title="2）在默认浏览器中打开刚刚爬取的网页"></a>2）在默认浏览器中打开刚刚爬取的网页</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">view(response)</span><br></pre></td></tr></table></figure>
+<p>爬取的网页会自动打开，此时我们会发现与原来的网页一模一样。</p>
+<h3 id="3）打开开发者模式下web控制台"><a href="#3）打开开发者模式下web控制台" class="headerlink" title="3）打开开发者模式下web控制台"></a>3）打开开发者模式下web控制台</h3><h3 id="4）用xpath插件获取要爬取的数据地址"><a href="#4）用xpath插件获取要爬取的数据地址" class="headerlink" title="4）用xpath插件获取要爬取的数据地址"></a>4）用xpath插件获取要爬取的数据地址</h3><p>此文打算爬取租房网站的房屋信息和价格。所以我们先获取价格的xpath。</p>
+<p>如图-1</p>
+<p><img src="http://chuantu.biz/t6/228/1518515240x-1566638183.png" alt="1"></p>
+<h3 id="5）终端中运行以下命令测试结果"><a href="#5）终端中运行以下命令测试结果" class="headerlink" title="5）终端中运行以下命令测试结果"></a>5）终端中运行以下命令测试结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">response.xpath(&quot;此处为获取的xpath地址&quot;).extract()</span><br></pre></td></tr></table></figure>
+<p>如图-2</p>
+<p><img src="http://chuantu.biz/t6/228/1518515323x-1566638183.png" alt="2"></p>
+<h3 id="6）观察想要获取的xpath的异同并爬取数据"><a href="#6）观察想要获取的xpath的异同并爬取数据" class="headerlink" title="6）观察想要获取的xpath的异同并爬取数据"></a>6）观察想要获取的xpath的异同并爬取数据</h3><p>比如此例中发现，不同价格的xpath均为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.//div[n]/dl/dd[5]/div[1]/span[1]</span><br></pre></td></tr></table></figure>
+<p>n为从1开始增大的整数。</p>
+<p>我们还发现，每个div的id都不同，但是class是相同的。至此，我们找到了这些数据的共同点。采取用class来爬取数据。</p>
+<p>如图-3</p>
+<p><img src="http://chuantu.biz/t6/228/1518515388x-1566638183.png" alt="3"></p>
+<p>此例中为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.//div[@class=&apos;f-list-item ershoufang-list&apos;]/...</span><br></pre></td></tr></table></figure>
+<p>如图-4 以获取当前页面所有的租房价格。</p>
+<p><img src="http://chuantu.biz/t6/228/1518515458x-1566638183.png" alt="4"></p>
+<p>以此类推，租房信息也是一样的思路。</p>
+<p>如图-5</p>
+<p><img src="http://chuantu.biz/t6/228/1518515596x-1566638183.png" alt="5"></p>
+<p>只需稍加处理便可进行数据分析。</p>
+<p>以上。</p>
+</section>
+    <!-- Tags START -->
+    
+      <div class="tags">
+        <span>Tags:</span>
+        
+  <a href="/tags#python" >
+    <span class="tag-code">python</span>
+  </a>
+
+      </div>
+    
+    <!-- Tags END -->
+    <!-- NAV START -->
+    
+  <div class="nav-container">
+    <!-- reverse left and right to put prev and next in a more logic postition -->
+    
+      <a class="nav-left" href="/2018/02/10/JS-学习笔记-1/">
+        <span class="nav-arrow">← </span>
+        
+          JS 学习笔记-1
+        
+      </a>
+    
+    
+      <a class="nav-right" href="/2018/02/14/用Scrapy和xpath爬取网页-2/">
+        
+          用Scrapy和xpath爬取网页-2
+        
+        <span class="nav-arrow"> →</span>
+      </a>
+    
+  </div>
+
+    <!-- NAV END -->
+    <!-- 打赏 START -->
+    
+      <div class="money-like">
+        <div class="reward-btn">
+          赏
+          <span class="money-code">
+            <span class="alipay-code">
+              <div class="code-image"></div>
+              <b>使用支付宝打赏</b>
+            </span>
+            <span class="wechat-code">
+              <div class="code-image"></div>
+              <b>使用微信打赏</b>
+            </span>
+          </span>
+        </div>
+        <p class="notice">若你觉得我的文章对你有帮助，欢迎点击上方按钮对我打赏</p>
+      </div>
+    
+    <!-- 打赏 END -->
+    <!-- 二维码 START -->
+    
+      <div class="qrcode">
+        <canvas id="share-qrcode"></canvas>
+        <p class="notice">扫描二维码，分享此文章</p>
+      </div>
+    
+    <!-- 二维码 END -->
+    
+      <!-- Gitment START -->
+      <div id="comments"></div>
+      <!-- Gitment END -->
+    
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+    <aside class="catalog-container">
+  <div class="toc-main">
+    <strong class="toc-title">Catalog</strong>
+    
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#一、Scrapy"><span class="toc-nav-text">一、Scrapy</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1）关于Scrapy的部署"><span class="toc-nav-text">1）关于Scrapy的部署</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2）用Scrapy创建项目（此例中不必须）"><span class="toc-nav-text">2）用Scrapy创建项目（此例中不必须）</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#二、爬取网页数据"><span class="toc-nav-text">二、爬取网页数据</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-我们随便测试一个网站"><span class="toc-nav-text">1)我们随便测试一个网站</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2）在默认浏览器中打开刚刚爬取的网页"><span class="toc-nav-text">2）在默认浏览器中打开刚刚爬取的网页</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3）打开开发者模式下web控制台"><span class="toc-nav-text">3）打开开发者模式下web控制台</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4）用xpath插件获取要爬取的数据地址"><span class="toc-nav-text">4）用xpath插件获取要爬取的数据地址</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#5）终端中运行以下命令测试结果"><span class="toc-nav-text">5）终端中运行以下命令测试结果</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#6）观察想要获取的xpath的异同并爬取数据"><span class="toc-nav-text">6）观察想要获取的xpath的异同并爬取数据</span></a></li></ol></li></ol>
+    
+  </div>
+</aside>
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    var url = 'http://yoursite.com/2018/02/13/用Scrapy和xpath爬取网页-1/';
+    var banner = 'http://chuantu.biz/t6/226/1518340278x-1566638243.jpg'
+    if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      $('#article-banner').css({
+        'background-image': 'url(' + banner + ')'
+      })
+    } else {
+      $('#article-banner').geopattern(url)
+    }
+    $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
+    // gitment
+    var gitmentConfig = "Julia9803";
+    if (gitmentConfig !== 'undefined') {
+      var gitment = new Gitment({
+        id: "用Scrapy和xpath爬取网页-1",
+        owner: "Julia9803",
+        repo: "julia9803.github.io",
+        oauth: {
+          client_id: "340befabc7d004035435",
+          client_secret: "6084c1aa597bbae3e7ce92df9e0f8e3a709f50a6"
+        },
+        theme: {
+          render(state, instance) {
+            const container = document.createElement('div')
+            container.lang = "en-US"
+            container.className = 'gitment-container gitment-root-container'
+            container.appendChild(instance.renderHeader(state, instance))
+            container.appendChild(instance.renderEditor(state, instance))
+            container.appendChild(instance.renderComments(state, instance))
+            container.appendChild(instance.renderFooter(state, instance))
+            return container;
+          }
+        }
+      })
+      gitment.render(document.getElementById('comments'))
+    }
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>

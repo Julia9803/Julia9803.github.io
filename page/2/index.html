@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Julia&#39;s blog">
+  <meta name="keyword" content="hexo-theme, vuejs">
+  
+    <link rel="shortcut icon" href="/css/images/logo.png">
+  
+  <title>
+    
+      Julia&#39;s BLOG
+    
+  </title>
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/plugins/gitment.css">
+<link rel="stylesheet" href="/assets/waifu.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+  <script src="/js/qrious.js"></script>
+<script src="/js/gitment.js"></script>
+  
+  
+    <!-- MathJax support START -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- MathJax support END -->
+  
+
+
+</head>
+<div class="wechat-share">
+  <img src="/css/images/logo.png" />
+</div>
+<div class="waifu">
+    <div class="waifu-tips"></div>
+    <canvas id="live2d" class="live2d"></canvas>
+    <div class="waifu-tool">
+        <span class="fui-home"></span>
+        <span class="fui-chat"></span>
+        <span class="fui-eye"></span>
+        <span class="fui-user"></span>
+        <span class="fui-photo"></span>
+        <span class="fui-info-circle"></span>
+        <span class="fui-cross"></span>
+    </div>
+</div>
+<script src="/assets/waifu-tips.js"></script>
+<script src="/assets/live2d.js"></script>
+<script type="text/javascript">
+    live2d_settings['modelId'] = 1;
+    live2d_settings['modelTexturesId'] = 87;
+    initModel("/assets/waifu-tips.json");
+</script>
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>Julia's BLOG</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link active">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/project/" class="item-link">Projects</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/about/" class="item-link">About</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link mobile-active">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/project/" class="menu-link">Projects</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/about/" class="menu-link">About</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <main class="app-body">
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/02/09/hello-world/">Hello World</a>
+      </h2>
+      <p class="article-date">February 9, 2018</p>
+      
+      <div class="article-summary">
+        
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
+        
+      </div>
+      <a class="more" href="/2018/02/09/hello-world/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2018/02/08/年少的诗-70-讳莫如深/">年少的诗-70-讳莫如深</a>
+      </h2>
+      <p class="article-date">February 8, 2018</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          讳莫如深也许是我始终没有勇气迎接这即将夺眶而出的泪缓缓滑落在至亲之人的面颊至悲至痛我懂却始终无法亲临感受
+不我怕我更怕亲临遁入骨髓至阴至寒人间万物顿然而凋只得逃之夭夭唯此作掩
+惧怕之事时为虚幻时为忏悔时为无力却锥心这黯然而绝望纠缠着似无形却总在恬淡安然之时冷袭溃不成军怎可因身值壮年而止悲怎可 ...
+        
+      </div>
+      <a class="more" href="/2018/02/08/年少的诗-70-讳莫如深/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/09/27/年少的诗-69-无题/">年少的诗-69-无题</a>
+      </h2>
+      <p class="article-date">September 27, 2017</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          无题浮生光阴浅愁无际清欢几盏幻如剧诉朝朝暮暮相忆
+抚琴弦动碎月影不堪荷风桂巷新殇有情只闻杜鹃啼
+————————————————
+夙彧 2017.9.27
+
+        
+      </div>
+      <a class="more" href="/2017/09/27/年少的诗-69-无题/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/08/11/年少的诗-68-如果早知道/">年少的诗-68-如果早知道</a>
+      </h2>
+      <p class="article-date">August 11, 2017</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          如果早知道你问我如果预知入骨之痛是否还会选择开启这份虐心回忆我说我无悔如果有轮回千千万万代
+你问我明明泪就在眼眶为何还要嘴硬我说我信缘每段感情都在三生石的刻痕里岁月抹不掉的痕迹
+如果明天就是灭亡也不愿意抹去记忆带着一世的执念向死而生
+如果早知结局唏嘘就头也不回走向另一边错过的决不止风景
+—— ...
+        
+      </div>
+      <a class="more" href="/2017/08/11/年少的诗-68-如果早知道/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/08/11/年少的诗-67-不过生活/">年少的诗-67-不过生活</a>
+      </h2>
+      <p class="article-date">August 11, 2017</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          不过生活人们说平平仄仄音韵甚是好听唱念婉转说不清道不明
+终抵不过冷风灌入胸膛入骨酥梦里已然为客落寞不过醒后风干如泪萧索
+颤抖着尚未平静的心想要抓住的影子也风蚀得点点成絮总有那么一只旧木箱黯淡角落下尘封着悲欢
+最无力不过日渐模糊的残影日趋平淡的生活日益麻木的你
+———————————————— ...
+        
+      </div>
+      <a class="more" href="/2017/08/11/年少的诗-67-不过生活/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/05/27/年少的诗-66-夜曲/">年少的诗-66-夜曲</a>
+      </h2>
+      <p class="article-date">May 27, 2017</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          夜曲人呐总有些时候需要一些悲情色彩个人英雄主义配上史诗般庄严的bgm单曲循环下触发那个危险的潘多拉无关现实纷扰琐碎仿佛自己就是整个世界只有这个时候才能卸下面具、重整盔甲肆意随心指点江山看日出日落、观潮涨月圆一颗大义凛然、铁骨铮铮的心啊在呼啸的冽风中愈发苍凉、悲壮也只有这个时候纵容自己慢慢深陷 ...
+        
+      </div>
+      <a class="more" href="/2017/05/27/年少的诗-66-夜曲/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/03/07/年少的诗-65-听雨/">年少的诗-65-听雨</a>
+      </h2>
+      <p class="article-date">March 7, 2017</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          听雨明年是否还会有你和那片樱花雨淅淅沥沥萧萧索索蓦然回首留意整片氤氲世间仿佛只剩下你樱花零落纷纷然宛如幻境包围在其中的你啊温香软玉恍若仙女你轻倚树干听花雨定格在那一瞬花瓣恰好挡住了你红肿而酸涩的眼
+明年是否还会有樱花树下的你有调皮的花瓣藏住你倔强的泪滴
+————————————————
+夙彧 ...
+        
+      </div>
+      <a class="more" href="/2017/03/07/年少的诗-65-听雨/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/02/18/年少的诗-64-离/">年少的诗-64-离</a>
+      </h2>
+      <p class="article-date">February 18, 2017</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          离——家以外的地方，都叫做流浪这一次离开西宁竟与上一次迥然相异缓缓摩挲每一处这个被称为家的地方眸里凝注、游走游走、又不忍凝注本想在这里仅有的几分钟之际再流连于旧物和旧梦重温谁知眼里的流彩却逐渐褪色呆滞、茫然只觉心里、眼里有如磐石重压、厚绳捆缚说不出话、也流不下泪已然没有了思绪却只感沉重与压抑 ...
+        
+      </div>
+      <a class="more" href="/2017/02/18/年少的诗-64-离/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2017/02/05/年少的诗-63-你/">年少的诗-63-你</a>
+      </h2>
+      <p class="article-date">February 5, 2017</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          你倦客天涯天地为衣那一刻开始叫做流浪
+再多一眼再多一念再多一点盛夏的五瓣丁香归途的厚重信笺青涩的婆娑泪眼
+你的脸开始模糊风蚀得只剩点点那些梦的碎片再也拼不成一幅熟悉的眷恋
+可是掌心的温度唇上的纹路怀抱里说不清的你的味道却是那样的真实萌动好似镜花水月一场空
+路未满 夜无垠点一盏荷花灯拨几根琴弦 ...
+        
+      </div>
+      <a class="more" href="/2017/02/05/年少的诗-63-你/">Read more</a>
+    </article>
+  
+    <article class="article-card">
+      <h2 class="article-head">
+        <a href="/2016/10/26/年少的诗-62/">年少的诗-62</a>
+      </h2>
+      <p class="article-date">October 26, 2016</p>
+      
+        
+  <a href="/tags#现代诗" >
+    <span class="tag-code">现代诗</span>
+  </a>
+
+      
+      <div class="article-summary">
+        
+          
+就像候鸟和故地
+秋叶泛黄了就离开
+离开了就再也不会来
+就像午时三刻的雨
+平淡不过晨钟暮鼓
+鼓声尽 青烟带不走无言愁绪
+就像蕉窗夜雨
+清冷了一整个夏夜的梦
+大梦醒 人去楼已空
+暗香浮动 黄昏映冷月
+桥边花落 疏影和桂香
+千觞尽 君知否
+酿可浓如酒
+————————————————
+夙彧 20 ...
+        
+      </div>
+      <a class="more" href="/2016/10/26/年少的诗-62/">Read more</a>
+    </article>
+  
+
+  
+    <div class="guide-pager">
+  
+    <a href="/"><span class="page-arrow">← </span>Prev</a>
+  
+  
+    <a href="/page/3/">Next<span class="page-arrow"> →</span></a>
+  
+</div>
+  
+</main>
+
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    &copy; 2019 | Proudly powered by <a href="https://hexo.io" target="_blank">Hexo</a>
+    <br>
+    Theme by <a href="https://github.com/yanm1ng">yanm1ng</a>
+  </p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script>
+  var hasLine = 'true';
+  async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine === 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  })
+</script>
+<!-- Baidu Tongji -->
+
+<script src="/js/script.js"></script>
+  </body>
+</html>
