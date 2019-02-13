@@ -174,253 +174,237 @@
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/01/25/机器学习之XGBoost调参/">机器学习之-XGBoost调参</a>
+        <a href="/2019/02/13/LeetCode-695-岛屿的最大面积/">LeetCode-695 岛屿的最大面积</a>
       </h2>
-      <p class="article-date">January 25, 2019</p>
-      
-        
-  <a href="/tags#machine learning" >
-    <span class="tag-code">machine learning</span>
-  </a>
-
+      <p class="article-date">February 13, 2019</p>
       
       <div class="article-summary">
         
-          XGBoost 作为构建分类模型比较出色的算法，是在GBDT之后又做提升的，我这里通过自己正在做的项目进行一个基于XGBoost的调参实践。以下为具体步骤：
-1. 常用参数解读
-estimator：所使用的分类器，如果比赛中使用的是XGBoost的话，就是生成的model。比如： model ...
+          1. 题面（一道经典DFS）给定一个包含了一些 0 和 1的非空二维数组 grid , 一个 岛屿 是由四个方向 (水平或垂直) 的 1 (代表土地) 构成的组合。你可以假设二维矩阵的四个边缘都被水包围着。
+找到给定的二维数组中最大的岛屿面积。(如果没有岛屿，则返回面积为0。)
+示例 1:
+ ...
         
       </div>
-      <a class="more" href="/2019/01/25/机器学习之XGBoost调参/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-695-岛屿的最大面积/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/01/23/python常用语句/">python常用语句</a>
+        <a href="/2019/02/13/LeetCode-674-最长连续递增序列/">LeetCode-674 最长连续递增序列</a>
       </h2>
-      <p class="article-date">January 23, 2019</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#python" >
-    <span class="tag-code">python</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          1. Pandas int to string12df['A'].apply(str)df.applymap(str)
-2. Pandas 去掉数据中空白Series.str.strip(to_strip=None)去除两边空白Series.str.lstrip(to_strip=None) ...
+          1. 题面给定一个未经排序的整数数组，找到最长且连续的的递增序列。
+示例 1:
+1234输入: [1,3,5,4,7]输出: 3解释: 最长连续递增序列是 [1,3,5], 长度为3。尽管 [1,3,5,7] 也是升序的子序列, 但它不是连续的，因为5和7在原数组里被4隔开。
+示例 2:
+1 ...
         
       </div>
-      <a class="more" href="/2019/01/23/python常用语句/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-674-最长连续递增序列/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2019/01/21/常用命令/">常用命令</a>
+        <a href="/2019/02/13/LeetCode-567-字符串的排列/">LeetCode-567 字符串的排列</a>
       </h2>
-      <p class="article-date">January 21, 2019</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#常用命令行" >
-    <span class="tag-code">常用命令行</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          SSH远程连接服务器ssh -p 端口号 username@服务器IP
-SSH本地开启远程jupyter notebookssh -p 端口号 username@服务器IP -N -L localhost:8889:localhost:8888
-注：服务器jupyter notebook的端 ...
+          1. 题面给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列。
+换句话说，第一个字符串的排列之一是第二个字符串的子串。
+示例1:
+123输入: s1 = &quot;ab&quot; s2 = &quot;eidbaooo&quot;输出: True解释: s2  ...
         
       </div>
-      <a class="more" href="/2019/01/21/常用命令/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-567-字符串的排列/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/09/05/机器学习之Rule Learning/">机器学习之-Rule Learning</a>
+        <a href="/2019/02/13/LeetCode-215-数组中的第k个最大元素/">LeetCode-215 数组中的第k个最大元素</a>
       </h2>
-      <p class="article-date">September 5, 2018</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#machine learning" >
-    <span class="tag-code">machine learning</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          本文所做数据处理为计算entropy(熵)，应用简易的Rule Learning(规则学习)算法。
-所用数据为：
-sailing-custom-python.tab
-zoo-python.tab
-1. Import 各种包123import pandas as pdimport numpy  ...
+          1. 题面在未排序的数组中找到第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
+示例 1:
+12输入: [3,2,1,5,6,4] 和 k = 2输出: 5
+示例 2:
+12输入: [3,2,3,1,2,4,5,5,6] 和 k = 4 ...
         
       </div>
-      <a class="more" href="/2018/09/05/机器学习之Rule Learning/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-215-数组中的第k个最大元素/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/09/02/React动态生成component自定义组件/">React动态生成component自定义组件</a>
+        <a href="/2019/02/13/LeetCode-206-反转列表/">LeetCode-206 反转列表</a>
       </h2>
-      <p class="article-date">September 2, 2018</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#React" >
-    <span class="tag-code">React</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          1. 遇到的问题这段时间写React项目，要根据自定义数量生成自定义组件。
-原始的
-1document.getElementById(expamle).innerHTML +="";
-或者
-1document.getElementById("myList").appendChild(newL ...
+          1. 题面反转一个单链表。
+示例:
+12输入: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL输出: 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL
+进阶:你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
+2. 解答123456789101 ...
         
       </div>
-      <a class="more" href="/2018/09/02/React动态生成component自定义组件/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-206-反转列表/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/03/16/mysql终端基本操作/">mysql终端基本操作</a>
+        <a href="/2019/02/13/LeetCode-155-最小栈/">LeetCode-155 最小栈</a>
       </h2>
-      <p class="article-date">March 16, 2018</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#常用命令行" >
-    <span class="tag-code">常用命令行</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          1. 从终端进出mysql先在偏好设置里启动mysql服务
-获取超级权限
-在终端输入代码
-sudo su
-输入完后获取超级权限 终端显示 sh-3.2#
-输入本机密码（Apple ID密码）
-接着通过绝对路径登陆 代码
-/usr/local/mysql/bin/mysql -u root - ...
+          1. 题面设计一个支持 push，pop，top 操作，并能在常数时间内检索到最小元素的栈。
+
+push(x) – 将元素 x 推入栈中。
+pop() – 删除栈顶的元素。
+top() – 获取栈顶元素。
+getMin() – 检索栈中的最小元素。
+
+示例:
+12345678MinStack ...
         
       </div>
-      <a class="more" href="/2018/03/16/mysql终端基本操作/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-155-最小栈/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/02/14/用Scrapy和xpath爬取网页-2/">用Scrapy和xpath爬取网页-2</a>
+        <a href="/2019/02/13/LeetCode-151-翻转字符串里的单词/">LeetCode-151 翻转字符串里的单词</a>
       </h2>
-      <p class="article-date">February 14, 2018</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#python" >
-    <span class="tag-code">python</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          本文是接上节中内容，在pycharm里面爬取数据。
-一、pycharm配置scrapypycharm可以自己下载scrapy非常方便。
-Preferences -&gt; Project Interpreter 直接添加Scrapy即可。
-二、建立scrapy项目上节中已经介绍过，在pych ...
+          1. 题面给定一个字符串，逐个翻转字符串中的每个单词。
+示例:  
+12输入: &quot;the sky is blue&quot;,输出: &quot;blue is sky the&quot;.
+说明:
+
+无空格字符构成一个单词。
+输入字符串可以在前面或者后面包含多余的空格，但是反转后 ...
         
       </div>
-      <a class="more" href="/2018/02/14/用Scrapy和xpath爬取网页-2/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-151-翻转字符串里的单词/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/02/13/用Scrapy和xpath爬取网页-1/">用Scrapy和xpath爬取网页-1</a>
+        <a href="/2019/02/13/LeetCode-146-LRU缓存机制/">LeetCode-146 LRU缓存机制</a>
       </h2>
-      <p class="article-date">February 13, 2018</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#python" >
-    <span class="tag-code">python</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          一、Scrapy首先，Scrapy是一个爬虫框架，用来爬取网页。接下来的工作基于Scrapy的基本应用。
-1）关于Scrapy的部署首先我电脑里已经有python2 和python3。
-python3会带有pip。
-我是用pip来安装scrapy的。
-首先检测一下pip3版本。
-12pip3 ...
+          1. 题面运用你所掌握的数据结构，设计和实现一个  LRU (最近最少使用) 缓存机制。它应该支持以下操作： 获取数据 get 和 写入数据 put 。
+获取数据 get(key) - 如果密钥 (key) 存在于缓存中，则获取密钥的值（总是正数），否则返回 -1。写入数据 put(key, ...
         
       </div>
-      <a class="more" href="/2018/02/13/用Scrapy和xpath爬取网页-1/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-146-LRU缓存机制/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/02/10/JS-学习笔记-1/">JS 学习笔记-1</a>
+        <a href="/2019/02/13/LeetCode-128-最长连续序列/">LeetCode-128 最长连续序列</a>
       </h2>
-      <p class="article-date">February 10, 2018</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#JavaScript" >
-    <span class="tag-code">JavaScript</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          11. 字符串方法
-
-
-Method
-描述
-
-
-
-
-charAt()
-返回指定索引位置的字符
-
-
-charCodeAt()
-返回指定索引位置字符的 Unicode 值
-
-
-concat()
-连接两个或多个字符串，返回连接后的字符串
-
-
-fromCharCode()
-将字符转换为 Unicod ...
+          1. 题面给定一个未排序的整数数组，找出最长连续序列的长度。
+要求算法的时间复杂度为 O(n)。
+示例:
+123输入: [100, 4, 200, 1, 3, 2]输出: 4解释: 最长连续序列是 [1, 2, 3, 4]。它的长度为 4。
+2. 解答12345678910111213141 ...
         
       </div>
-      <a class="more" href="/2018/02/10/JS-学习笔记-1/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-128-最长连续序列/">Read more</a>
     </article>
   
     <article class="article-card">
       <h2 class="article-head">
-        <a href="/2018/02/10/JS-学习笔记-0/">JS 学习笔记-0</a>
+        <a href="/2019/02/13/LeetCode-122-买卖股票的最佳时机2/">LeetCode-122 买卖股票的最佳时机2</a>
       </h2>
-      <p class="article-date">February 10, 2018</p>
+      <p class="article-date">February 13, 2019</p>
       
         
-  <a href="/tags#JavaScript" >
-    <span class="tag-code">JavaScript</span>
+  <a href="/tags#LeetCode" >
+    <span class="tag-code">LeetCode</span>
   </a>
 
       
       <div class="article-summary">
         
-          1. button事件响应1）一般1&lt;button type=&quot;button&quot; onclick=“alert(&apos;欢迎!&apos;)&quot;&gt;点我!&lt;/button&gt;
-2）通过id1234567891011&lt;h1&gt;我的第一 ...
+          1. 题面给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
+设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。
+注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+示例 1:
+1234输入: [7,1,5,3,6,4] ...
         
       </div>
-      <a class="more" href="/2018/02/10/JS-学习笔记-0/">Read more</a>
+      <a class="more" href="/2019/02/13/LeetCode-122-买卖股票的最佳时机2/">Read more</a>
     </article>
   
 
