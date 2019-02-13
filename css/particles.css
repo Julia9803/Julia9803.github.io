@@ -1,7 +1,0 @@
-#particles {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: -1;   //这个z-index 要是不设置 会对登录表单的点击产生干扰，会去抢风头，不好好做一个安静的背景。
-    background-color: #26AFE3;
-    }
