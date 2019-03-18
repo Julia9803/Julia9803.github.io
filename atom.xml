@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T10:13:49.110Z</updated>
+  <updated>2019-03-18T15:38:12.281Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>区块链共识算法论文转述</title>
+    <link href="http://yoursite.com/2019/03/18/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%85%B1%E8%AF%86%E7%AE%97%E6%B3%95%E8%AE%BA%E6%96%87%E8%BD%AC%E8%BF%B0/"/>
+    <id>http://yoursite.com/2019/03/18/区块链共识算法论文转述/</id>
+    <published>2019-03-18T14:57:20.000Z</published>
+    <updated>2019-03-18T15:38:12.281Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="《区块链共识算法的发展与展望》论文转述"><a href="#《区块链共识算法的发展与展望》论文转述" class="headerlink" title="《区块链共识算法的发展与展望》论文转述"></a>《区块链共识算法的发展与展望》论文转述</h3><p><img src="/css/img/consensusAlgo/1.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/2.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/3.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/4.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/5.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/6.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/7.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/8.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/9.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/10.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/11.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/12.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/13.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/14.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/15.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/16.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/17.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/18.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/19.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/20.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/21.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/22.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/23.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/24.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/25.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/26.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/27.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/28.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/29.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/30.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/31.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/32.jpeg" alt=""></p><p><img src="/css/img/consensusAlgo/33.jpeg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;《区块链共识算法的发展与展望》论文转述&quot;&gt;&lt;a href=&quot;#《区块链共识算法的发展与展望》论文转述&quot; class=&quot;headerlink&quot; title=&quot;《区块链共识算法的发展与展望》论文转述&quot;&gt;&lt;/a&gt;《区块链共识算法的发展与展望》论文转述&lt;/h3&gt;&lt;p&gt;&lt;i
+      
+    
+    </summary>
+    
+    
+      <category term="Blockchain" scheme="http://yoursite.com/tags/Blockchain/"/>
+    
+  </entry>
   
   <entry>
     <title>js中this用法</title>
@@ -458,30 +481,6 @@
       
         &lt;h3 id=&quot;1-题面&quot;&gt;&lt;a href=&quot;#1-题面&quot; class=&quot;headerlink&quot; title=&quot;1. 题面&quot;&gt;&lt;/a&gt;1. 题面&lt;/h3&gt;&lt;p&gt;假设按照升序排序的数组在预先未知的某个点上进行了旋转。&lt;/p&gt;
 &lt;p&gt;( 例如，数组 &lt;code&gt;[0,1,2,4,5,
-      
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-26 删除排序数组中的重复项</title>
-    <link href="http://yoursite.com/2019/02/13/LeetCode-26-%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9/"/>
-    <id>http://yoursite.com/2019/02/13/LeetCode-26-删除排序数组中的重复项/</id>
-    <published>2019-02-13T10:51:20.000Z</published>
-    <updated>2019-02-13T11:33:41.045Z</updated>
-    
-    <content type="html"><![CDATA[<p>给定一个排序数组，你需要在<strong>原地</strong>删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p><p>不要使用额外的数组空间，你必须在<strong>原地修改输入数组</strong>并在使用 O(1) 额外空间的条件下完成。</p><p><strong>示例 1:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定数组 nums = [1,1,2], </span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。 </span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure><p><strong>示例 2:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [0,0,1,1,1,2,2,3,3,4],</span><br><span class="line"></span><br><span class="line">函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</span><br><span class="line"></span><br><span class="line">你不需要考虑数组中超出新长度后面的元素。</span><br></pre></td></tr></table></figure><p><strong>说明:</strong></p><p>为什么返回数值是整数，但输出的答案是数组呢?</p><p>请注意，输入数组是以<strong>“引用”</strong>方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p><p>你可以想象内部操作如下:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝</span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line">// 在函数里修改输入数组对于调用者是可见的。</span><br><span class="line">// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2-解答"><a href="#2-解答" class="headerlink" title="2. 解答"></a>2. 解答</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 方法一 </span></span><br><span class="line">        <span class="comment">// Arrays.sort(nums);</span></span><br><span class="line">        <span class="comment">// int num = 0;</span></span><br><span class="line">        <span class="comment">// for (int i = 0;i&lt;nums.length;i++) &#123;</span></span><br><span class="line">        <span class="comment">//     if(i == 0)</span></span><br><span class="line">        <span class="comment">//         num = nums[i];</span></span><br><span class="line">        <span class="comment">//     else&#123;</span></span><br><span class="line">        <span class="comment">//         if(nums[i] == num) &#123;</span></span><br><span class="line">        <span class="comment">//             nums[i]</span></span><br><span class="line">        <span class="comment">//         &#125;</span></span><br><span class="line">        <span class="comment">//     &#125;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();</span></span><br><span class="line">        <span class="comment">// ArrayList&lt;Integer&gt; l = new ArrayList&lt;Integer&gt;();</span></span><br><span class="line">        <span class="comment">// for(int num:nums) &#123;</span></span><br><span class="line">        <span class="comment">//     list.add(num);</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// for(int i = 0;i&lt;list.size();i++) &#123;</span></span><br><span class="line">        <span class="comment">//     if(!l.contains(list.get(i)))&#123;</span></span><br><span class="line">        <span class="comment">//         l.add(list.get(i));</span></span><br><span class="line">        <span class="comment">//     &#125;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// System.out.println(l);</span></span><br><span class="line">        <span class="comment">// for(int i = 0;i&lt;l.size();i++) &#123;</span></span><br><span class="line">        <span class="comment">//     nums[i] = l.get(i);</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// return nums.length; </span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 方法2 </span></span><br><span class="line">        <span class="keyword">if</span> (nums.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; nums.length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[j] != nums[i]) &#123;</span><br><span class="line">                i++;</span><br><span class="line">                nums[i] = nums[j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;给定一个排序数组，你需要在&lt;strong&gt;原地&lt;/strong&gt;删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。&lt;/p&gt;
-&lt;p&gt;不要使用额外的数组空间，你必须在&lt;strong&gt;原地修改输入数组&lt;/strong&gt;并在使用 O(1) 额外空间的条件下完成。&lt;
       
     
     </summary>
