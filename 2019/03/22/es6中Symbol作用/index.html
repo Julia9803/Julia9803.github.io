@@ -10,7 +10,7 @@
   
   <title>
     
-      区块链共识算法论文转述 | Julia&#39;s BLOG
+      es6中Symbol作用 | Julia&#39;s BLOG
     
   </title>
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -172,8 +172,8 @@
 </header>
 
     <div id="article-banner">
-  <h2>区块链共识算法论文转述</h2>
-  <p class="post-date">2019-03-18</p>
+  <h2>es6中Symbol作用</h2>
+  <p class="post-date">2019-03-22</p>
   <div class="arrow-down">
     <a href="javascript:;"></a>
   </div>
@@ -181,47 +181,23 @@
 <main class="app-body flex-box">
   <!-- Article START -->
   <article class="post-article">
-    <section class="markdown-content"><h3 id="《区块链共识算法的发展与展望》论文转述"><a href="#《区块链共识算法的发展与展望》论文转述" class="headerlink" title="《区块链共识算法的发展与展望》论文转述"></a>《区块链共识算法的发展与展望》论文转述</h3><p><img src="/css/img/consensusAlgo/1.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/2.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/3.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/4.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/5.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/6.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/7.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/8.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/9.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/10.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/11.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/12.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/13.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/14.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/15.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/16.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/17.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/18.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/19.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/20.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/21.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/22.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/23.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/24.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/25.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/26.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/27.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/28.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/29.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/30.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/31.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/32.Jpeg" alt=""></p>
-<p><img src="/css/img/consensusAlgo/33.Jpeg" alt=""></p>
+    <section class="markdown-content"><h3 id="1-Symbol"><a href="#1-Symbol" class="headerlink" title="1. Symbol"></a>1. Symbol</h3><p><strong>symbol是es6出的一种类型，他也是属于原始类型的范畴(string,</strong><br><strong>number, boolean, null, undefined, symbol)</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="built_in">Symbol</span>(<span class="string">'xiaohesong'</span>)</span><br><span class="line"><span class="keyword">typeof</span> name <span class="comment">// 'symbol'</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;</span><br><span class="line">obj[name] = <span class="string">'xhs'</span></span><br><span class="line"><span class="built_in">console</span>.log(obj[name]) <span class="comment">//xhs</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-Symbol-for"><a href="#2-Symbol-for" class="headerlink" title="2. Symbol for"></a>2. Symbol for</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> uid = <span class="built_in">Symbol</span>.for(<span class="string">"uid"</span>);</span><br><span class="line"><span class="keyword">let</span> object = &#123;</span><br><span class="line">    [uid]: <span class="string">"12345"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(object[uid]);       <span class="comment">// "12345"</span></span><br><span class="line"><span class="built_in">console</span>.log(uid);               <span class="comment">// "Symbol(uid)"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> uid2 = <span class="built_in">Symbol</span>.for(<span class="string">"uid"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(uid === uid2);      <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(object[uid2]);      <span class="comment">// "12345"</span></span><br><span class="line"><span class="built_in">console</span>.log(uid2);</span><br></pre></td></tr></table></figure>
+<h3 id="3-Symbol-keyfor"><a href="#3-Symbol-keyfor" class="headerlink" title="3. Symbol keyfor"></a>3. Symbol keyfor</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> uid = <span class="built_in">Symbol</span>.for(<span class="string">"uid"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Symbol</span>.keyFor(uid));    <span class="comment">// "uid"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> uid2 = <span class="built_in">Symbol</span>.for(<span class="string">"uid"</span>);<span class="comment">//</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Symbol</span>.keyFor(uid2));   <span class="comment">// "uid"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> uid3 = <span class="built_in">Symbol</span>(<span class="string">"uid"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Symbol</span>.keyFor(uid3));   <span class="comment">// undefined</span></span><br></pre></td></tr></table></figure>
+<p>全局注册表不存在uid3这个共享的symbol.所以取不出对应的key.由此可见，这个是获取对应的key.</p>
+<h3 id="4-Symbol-在对象中的作用"><a href="#4-Symbol-在对象中的作用" class="headerlink" title="4. Symbol 在对象中的作用"></a>4. Symbol 在对象中的作用</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;</span><br><span class="line">    name:<span class="string">'name'</span>,</span><br><span class="line">    gender:<span class="string">'male'</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> age = <span class="built_in">Symbol</span>();</span><br><span class="line">obj[age] = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> item <span class="keyword">in</span> obj) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj[item]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj);</span><br></pre></td></tr></table></figure>
+<p>输出：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">name</span><br><span class="line">male</span><br><span class="line">&#123; <span class="attr">name</span>: <span class="string">'name'</span>, <span class="attr">gender</span>: <span class="string">'male'</span>, [<span class="built_in">Symbol</span>()]: <span class="number">6</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>结论：<em>symbol 保护数据 遍历的时候不输出</em></p>
 </section>
     <!-- Tags START -->
     
       <div class="tags">
         <span>Tags:</span>
         
-  <a href="/tags#Blockchain" >
-    <span class="tag-code">Blockchain</span>
+  <a href="/tags#JavaScript" >
+    <span class="tag-code">JavaScript</span>
   </a>
 
       </div>
@@ -232,20 +208,13 @@
   <div class="nav-container">
     <!-- reverse left and right to put prev and next in a more logic postition -->
     
-      <a class="nav-left" href="/2019/03/18/js中this用法/">
+      <a class="nav-left" href="/2019/03/18/区块链共识算法论文转述/">
         <span class="nav-arrow">← </span>
         
-          js中this用法
+          区块链共识算法论文转述
         
       </a>
     
-    
-      <a class="nav-right" href="/2019/03/22/es6中Symbol作用/">
-        
-          es6中Symbol作用
-        
-        <span class="nav-arrow"> →</span>
-      </a>
     
   </div>
 
@@ -291,7 +260,7 @@
   <div class="toc-main">
     <strong class="toc-title">Catalog</strong>
     
-      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#《区块链共识算法的发展与展望》论文转述"><span class="toc-nav-text">《区块链共识算法的发展与展望》论文转述</span></a></li></ol>
+      <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#1-Symbol"><span class="toc-nav-text">1. Symbol</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#2-Symbol-for"><span class="toc-nav-text">2. Symbol for</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#3-Symbol-keyfor"><span class="toc-nav-text">3. Symbol keyfor</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#4-Symbol-在对象中的作用"><span class="toc-nav-text">4. Symbol 在对象中的作用</span></a></li></ol>
     
   </div>
 </aside>
@@ -301,8 +270,8 @@
 
 <script>
   (function () {
-    var url = 'http://yoursite.com/2019/03/18/区块链共识算法论文转述/';
-    var banner = 'http://chuantu.biz/t6/226/1518340278x-1566638243.jpg'
+    var url = 'http://yoursite.com/2019/03/22/es6中Symbol作用/';
+    var banner = 'http://thyrsi.com/t6/662/1548243282x2890171450.jpg'
     if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
       $('#article-banner').css({
         'background-image': 'url(' + banner + ')'
@@ -357,7 +326,7 @@
     var gitmentConfig = "Julia9803";
     if (gitmentConfig !== 'undefined') {
       var gitment = new Gitment({
-        id: "区块链共识算法论文转述",
+        id: "es6中Symbol作用",
         owner: "Julia9803",
         repo: "julia9803.github.io",
         oauth: {
