@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-20T03:17:03.640Z</updated>
+  <updated>2019-06-20T03:19:36.847Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/06/20/google-colab%E6%8C%82%E8%BD%BD/"/>
     <id>http://yoursite.com/2019/06/20/google-colab挂载/</id>
     <published>2019-06-20T02:49:08.000Z</published>
-    <updated>2019-06-20T03:17:03.640Z</updated>
+    <updated>2019-06-20T03:19:36.847Z</updated>
     
     <content type="html"><![CDATA[<h1 id="1-Google-colab是什么"><a href="#1-Google-colab是什么" class="headerlink" title="1. Google colab是什么"></a>1. Google colab是什么</h1><p>首先我们知道，深度学习跑起来非常烧电脑，我曾经因为加了5个epochs电脑直接关机重启。那么不用自己电脑可以用别的什么呢？</p><ol><li>实验室服务器</li><li>Google colab</li></ol><p>如果很不巧，实验室服务器挂了或者你忘了密码上不去了(不是我)，那么推荐用Google colab(需要tz)。有免费的GPU和TPU可以用，操作简单，速度飞快，妈妈再也不用担心我烧坏电脑啦！</p><p>#2. 如何使用</p><p>Google drive 右键新建找到Colab点击，看起来是一个jupyter notebook的页面（此前需要一系列授权操作，在此不赘述）。需要GPU，TPU跑的，点击更改运行时类型，可以换python版本，和GPU，TPU。</p><h1 id="3-如何挂载"><a href="#3-如何挂载" class="headerlink" title="3. 如何挂载"></a>3. 如何挂载</h1><p>有时候不只是单个文件运行，还需要载入生成数据啊，其他代码调用之类的。此时会发现，Google colab需要挂载到自己的Google drive才能顺利的找到其他文件的目录。输入以下代码挂载，提示需要到其他页面获取验证码，输入后查看目录就可以了，如图。温馨提示，挂载操作每次新打开都要重新来一遍。</p><p><img src="/css/img/colab1.png" alt=""></p><p><img src="/css/img/colab2.png" alt=""></p><h1 id="4-享受深度学习的快乐"><a href="#4-享受深度学习的快乐" class="headerlink" title="4. 享受深度学习的快乐"></a>4. 享受深度学习的快乐</h1><p>除了在colab创建python文件以外，还可以本地上传文件夹，然后在colab上运行，非常方便。感谢Google！ </p><p>好了，没什么要说的了。请尽情享受深度学习的快乐吧！</p>]]></content>
     
