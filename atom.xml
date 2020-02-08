@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-20T03:23:59.988Z</updated>
+  <updated>2020-02-08T16:58:32.508Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django搭建python后端</title>
+    <link href="http://yoursite.com/2020/02/08/Django%E6%90%AD%E5%BB%BApython%E5%90%8E%E7%AB%AF/"/>
+    <id>http://yoursite.com/2020/02/08/Django搭建python后端/</id>
+    <published>2020-02-08T06:25:24.000Z</published>
+    <updated>2020-02-08T16:58:32.508Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-在Java中写python"><a href="#1-在Java中写python" class="headerlink" title="1. 在Java中写python"></a>1. 在Java中写python</h3><p>毕设项目需要通过python代码来生成结果，一开始的想法是将python代码嵌入Java后端。于是找到了jython库，是在Java中实现的python。后来运用的时候发现，jython并不支持python原生库以外的第三方库，比如sklearn，scipy。这就比较难受了，所以只能考虑搭建python后端。</p><h3 id="2-Django搭建python后端"><a href="#2-Django搭建python后端" class="headerlink" title="2. Django搭建python后端"></a>2. Django搭建python后端</h3><p>Django是一个比较完善的python框架了，能完美实现一个web项目后端的需求，甚至也可和Vue搭建完整的前后端项目。并且python代码非常简洁，比Java要少不少代码。新建一个Django项目只需在命令行运行以下几行代码便可成功搭建基本的框架。</p><p>创建一个HelloWorld项目：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject HelloWorld</span><br></pre></td></tr></table></figure><p>HelloWorld为项目容器。</p><p>运行项目：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py runserver</span><br></pre></td></tr></table></figure><p>此行后可添加端口号，默认为8000</p><h3 id="3-虚拟环境"><a href="#3-虚拟环境" class="headerlink" title="3. 虚拟环境"></a>3. 虚拟环境</h3><p>一开始搭建项目，没有考虑专门建一个虚拟环境，先用的其他项目的环境。后来发现了诡异的bug（Django模块冲突无法安装），于是新建一个虚拟环境。</p><h3 id="4-Django接收跨域请求"><a href="#4-Django接收跨域请求" class="headerlink" title="4. Django接收跨域请求"></a>4. Django接收跨域请求</h3><p><a href="https://blog.csdn.net/wolf131721/article/details/89852652" target="_blank" rel="noopener">https://blog.csdn.net/wolf131721/article/details/89852652</a></p><p>通过修改setting.py中几行代码，过程以上链接，便可接受跨域请求。（PS 我额外修改了ALLOWED_HOSTS = [‘localhost’]这行代码才请求成功）</p><h3 id="5-Django后台管理系统"><a href="#5-Django后台管理系统" class="headerlink" title="5. Django后台管理系统"></a>5. Django后台管理系统</h3><p>值得一提的是，Django有一个自带的后台管理系统，使用非常方便。</p><p>创建一个新账户进行管理：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure><p>接下来根据提示输入用户名，邮箱和密码。</p><p>然后再运行项目可以在以下地址进入admin系统：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://127.0.0.1:8000/admin/</span><br></pre></td></tr></table></figure><p>期待后续能对这一功能进行应用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-在Java中写python&quot;&gt;&lt;a href=&quot;#1-在Java中写python&quot; class=&quot;headerlink&quot; title=&quot;1. 在Java中写python&quot;&gt;&lt;/a&gt;1. 在Java中写python&lt;/h3&gt;&lt;p&gt;毕设项目需要通过python代码
+      
+    
+    </summary>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>google colab挂载</title>
@@ -457,29 +480,6 @@
       
       
         &lt;h3 id=&quot;1-题面&quot;&gt;&lt;a href=&quot;#1-题面&quot; class=&quot;headerlink&quot; title=&quot;1. 题面&quot;&gt;&lt;/a&gt;1. 题面&lt;/h3&gt;&lt;p&gt;给出集合 &lt;code&gt;[1,2,3,…,*n*]&lt;/code&gt;，其所有元素共有 &lt;em&gt;n&lt;/em&gt;! 种排列。&lt;/p&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="LeetCode" scheme="http://yoursite.com/tags/LeetCode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>LeetCode-53 最大子序和</title>
-    <link href="http://yoursite.com/2019/02/13/LeetCode-53-%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/"/>
-    <id>http://yoursite.com/2019/02/13/LeetCode-53-最大子序和/</id>
-    <published>2019-02-13T11:02:11.000Z</published>
-    <updated>2019-02-13T11:33:38.826Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="1-题面"><a href="#1-题面" class="headerlink" title="1. 题面"></a>1. 题面</h3><p>给定一个整数数组 <code>nums</code> ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p><p><strong>示例:</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [-2,1,-3,4,-1,2,1,-5,4],</span><br><span class="line">输出: 6</span><br><span class="line">解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。</span><br></pre></td></tr></table></figure><p><strong>进阶:</strong></p><p>如果你已经实现复杂度为 O(<em>n</em>) 的解法，尝试使用更为精妙的分治法求解。</p><h3 id="2-解答"><a href="#2-解答" class="headerlink" title="2. 解答"></a>2. 解答</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 方法一 暴力枚举</span></span><br><span class="line">        <span class="comment">// if(nums.length == 1) &#123;</span></span><br><span class="line">        <span class="comment">//     return nums[0];</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// int sum = nums[0];</span></span><br><span class="line">        <span class="comment">// int tmp = 0;</span></span><br><span class="line">        <span class="comment">// for(int i = 0;i&lt;nums.length;i++) &#123;</span></span><br><span class="line">        <span class="comment">//     for(int j =1;j&lt;nums.length-i+1;j++) &#123;</span></span><br><span class="line">        <span class="comment">//         for(int k = i;k&lt;i+j;k++) &#123;</span></span><br><span class="line">        <span class="comment">//             tmp += nums[k]; </span></span><br><span class="line">        <span class="comment">//         &#125;</span></span><br><span class="line">        <span class="comment">//         // System.out.println(tmp);</span></span><br><span class="line">        <span class="comment">//         if(tmp &gt; sum)&#123;</span></span><br><span class="line">        <span class="comment">//             sum = tmp;</span></span><br><span class="line">        <span class="comment">//         &#125;</span></span><br><span class="line">        <span class="comment">//         tmp = 0;</span></span><br><span class="line">        <span class="comment">//     &#125;</span></span><br><span class="line">        <span class="comment">// &#125;</span></span><br><span class="line">        <span class="comment">// return sum;</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// 方法二</span></span><br><span class="line">        <span class="keyword">int</span> res = nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sum &gt; <span class="number">0</span>)</span><br><span class="line">                sum += num;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                sum = num;</span><br><span class="line">            res = Math.max(res, sum);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;1-题面&quot;&gt;&lt;a href=&quot;#1-题面&quot; class=&quot;headerlink&quot; title=&quot;1. 题面&quot;&gt;&lt;/a&gt;1. 题面&lt;/h3&gt;&lt;p&gt;给定一个整数数组 &lt;code&gt;nums&lt;/code&gt; ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其
       
     
     </summary>
