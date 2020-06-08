@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/03/01/%E5%B9%B4%E5%B0%91%E7%9A%84%E8%AF%97-72-%E8%BF%9C/</loc>
+    <loc>http://yoursite.com/2020/06/08/%E5%B0%8F%E5%BD%A7%E7%9A%84%E6%9C%AC%E7%A7%91%E6%95%85%E4%BA%8B%E7%B3%BB%E5%88%97%E4%B8%80%EF%BC%9A%E7%A4%BE%E5%9B%A2%E6%B4%BB%E5%8A%A8/</loc>
     
-    <lastmod>2020-03-01T08:24:52.855Z</lastmod>
+    <lastmod>2020-06-08T08:54:52.191Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/03/01/%E5%B9%B4%E5%B0%91%E7%9A%84%E8%AF%97-73-%E8%8B%B1%E9%9B%84/</loc>
     
-    <lastmod>2020-03-01T08:24:32.494Z</lastmod>
+    <lastmod>2020-03-01T08:26:59.546Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/03/01/%E5%B9%B4%E5%B0%91%E7%9A%84%E8%AF%97-72-%E8%BF%9C/</loc>
+    
+    <lastmod>2020-03-01T08:24:52.855Z</lastmod>
     
   </url>
   
@@ -807,14 +814,14 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/project/index.html</loc>
+    <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2018-02-09T04:23:40.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>http://yoursite.com/project/index.html</loc>
     
     <lastmod>2018-02-09T04:23:40.000Z</lastmod>
     
